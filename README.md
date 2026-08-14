@@ -1,0 +1,23 @@
+# App Enablement Resources
+
+An open knowledge base for building Ethereum applications with CROPS properties: Censorship Resistance, Open Source and Free, Privacy, and Security.
+
+This repository describes, in first-principles terms, the guarantees a CROPS-aligned application can offer its users, the cryptographic and protocol primitives that provide those guarantees, and the tooling that implements them.
+
+## Who this is for
+
+- **Application builders** (wallets, DEXes, oracles, and other domains): start from your domain page and follow the links.
+- **Anyone using an LLM to work on these topics**: the repository is structured as high-quality model context. One concept per file, strict frontmatter, stable cross-reference IDs. See [CLAUDE.md](./CLAUDE.md).
+
+## How to navigate
+
+1. [domains/](./domains/) is the entry point. Each page decomposes an application domain into its functions and states the desired properties of each function as identified guarantees (for example W-1: network access does not link a user's addresses to their IP).
+2. [primitives/](./primitives/) explains the building blocks behind each guarantee: what the primitive is, what it buys in CROPS terms, its trust model and maturity.
+3. [tooling/](./tooling/) lists implementations and integration guides, tagged with the guarantee IDs they satisfy.
+4. [specs/](./specs/) holds reference cards for specifications (EIPs, ERCs, protocol specs), pinned to permalinks.
+
+Shared vocabulary is defined once in [GLOSSARY.md](./GLOSSARY.md).
+
+## Scope and stance
+
+This repository is descriptive. It states properties, explains how they can be achieved, and records the state of the art and its maturity. It does not score, certify, or endorse specific applications or vendors.
