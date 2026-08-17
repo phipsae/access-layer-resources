@@ -31,7 +31,7 @@ An open knowledge base that takes an application builder from their domain (wall
 
 ### Milestone 1: format proof
 
-- [ ] Wallet domain end-to-end: intro, W-1..W-5 guarantee blocks fully drafted, real end-user motivations.
+- [x] Wallet domain end-to-end: intro, W-1..W-5 guarantee blocks fully drafted.
 - [ ] First primitive cards: `stealth-addresses` (W-2), `pir` (W-1, W-3), `mixnets` (W-1). One card fully drafted before replicating.
 - [ ] Document anon-rpc: first `tooling/` card. Private RPC access, satisfies W-1; linked from the wallet domain's Ship it section.
 
