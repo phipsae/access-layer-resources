@@ -48,6 +48,7 @@ An open knowledge base that takes an application builder from their domain (wall
   - [ ] `bridges`
 - [ ] Contribution guidelines (`CONTRIBUTING.md`): how to add a card, guarantee-ID rules, voice and formatting rules, review flow.
 - [ ] Primitive backlog from wallet.md: `light-clients` (W-4), `native-account-abstraction` (W-4), `transaction-simulation` (W-5).
+- [ ] Wallet guarantee candidates, parked pending sharper framing: private transfers (must read as a goal layered on a transparent-by-default L1, never as a default), key custody and recovery (open question: one merged key-access-lifecycle guarantee or two).
 
 ### Milestone 3: publication
 

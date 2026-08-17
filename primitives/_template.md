@@ -12,31 +12,14 @@ maturity: research | concept | testnet | production
 # Guarantee IDs this primitive can satisfy, defined in domains/.
 guarantees: [W-1]
 
-# When to reach for this primitive, and when not to. 1-3 bullets each.
-works-best-when:
-  - <condition>
-avoid-when:
-  - <condition>
-
-# CROPS profile: badge plus narrative. The badge is the typical rating; the
-# narrative says where it drifts up or down in practice.
-crops_profile:
+# CROPS grades. The grade stands alone when self-evident. When it needs
+# context (a caveat, a mitigation, where it drifts in practice), append it
+# after the grade: "partial: <justification or mitigation>".
+crops:
   cr: high | medium | low | none
   o: yes | partial | no
   p: full | partial | none
   s: high | medium | low
-crops_context:
-  cr: "<where the rating drifts, e.g. high with permissionless relays, low behind an operator-run gateway>"
-  o: "..."
-  p: "..."
-  s: "..."
-
-# Post-quantum exposure. Encrypted data recorded today can be harvested now
-# and decrypted later (HNDL), so every privacy primitive declares this.
-post_quantum:
-  risk: high | medium | low
-  vector: "<what breaks under a CRQC>"
-  mitigation: "<hash-based / lattice-based alternative, migration path>"
 
 # Typed cross-references to other primitives. Slugs match
 # primitives/<slug>.md and must resolve to an existing file.
@@ -79,11 +62,11 @@ Who or what must behave honestly for the guarantee to hold, and what breaks when
 
 ## Known limits
 
-Performance costs, anonymity-set considerations, UX costs, and other limits a builder should know before committing. CROPS drift and post-quantum exposure live in frontmatter, not here.
+Performance costs, anonymity-set considerations, UX costs, and other limits a builder should know before committing. Post-quantum exposure and its mitigation belong here; encrypted or key-revealing data recorded on chain today can be harvested now and decrypted later, so every privacy primitive states what a CRQC breaks and what the migration path is.
 
 ## Implementations
 
-Links to [tooling/](../tooling/) cards.
+Links to [tooling/](../tooling/) cards. Every implementation named here links to its open source code.
 
 ## Further reading
 

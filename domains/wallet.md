@@ -30,7 +30,7 @@ A wallet is the user's interface to Ethereum. It holds keys, builds and signs tr
 - **Property**: Operating the wallet does not link a user's addresses to each other, on chain or through the wallet's own queries.
 - **Functions**: [Address management]
 - **Motivation**: One address receives a salary, another makes donations. If the two can be joined, a single payment to one exposes everything behind the other. Deriving accounts from one seed and querying them over the same connection joins them at the network layer even when they stay separate on chain.
-- **Primitives**: `stealth-addresses` (ERC-5564) for receiving without publishing a shared identity; per-context accounts with isolated querying (wallet practice, no card).
+- **Primitives**: [stealth-addresses](../primitives/stealth-addresses.md) (ERC-5564) for receiving without publishing a shared identity; per-context accounts with isolated querying (wallet practice, no card).
 - **Upgrade path**: Stealth addresses are specified in ERC-5564 (Final), with production deployments (Umbra, Fluidkey) on mainnet and several L2s; wallet-native adoption remains minimal.
 
 ### W-3: No usage-data exfiltration [P, S]

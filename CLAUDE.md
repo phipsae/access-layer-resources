@@ -20,7 +20,7 @@ guarantees: [W-1, W-3]   # IDs satisfied (primitives, tooling, specs; not domain
 ---
 ```
 
-Primitives additionally carry `maturity`, `works-best-when` / `avoid-when`, `crops_profile` (badges) paired with `crops_context` (narratives on where each badge drifts in practice), `post_quantum` (risk / vector / mitigation), typed `related` cross-references, and optional `variants` for primitives whose flavors have diverging trust models. Tooling carries `maturity`, `implements` (primitive slug), and the works/avoid pair.
+Primitives additionally carry `maturity`, `crops` (one grade per letter; the grade stands alone when self-evident, with a justification or mitigation appended as `"partial: <context>"` when it needs one), typed `related` cross-references, and optional `variants` for primitives whose flavors have diverging trust models. Post-quantum exposure is not frontmatter; it is stated in the card's Known limits section with its mitigation. Tooling carries `maturity`, `implements` (primitive slug), and the works/avoid pair.
 
 Maturity levels: `research` (papers only), `concept` (spec, no code), `testnet` (PoC or pilot), `production` (audited, sustained mainnet use).
 
