@@ -18,7 +18,7 @@ An open knowledge base that takes an application builder from their domain (wall
 - **R-1 Content model**: four content types with a fixed flow. `domains/` (entry point: functions and guarantees) to `primitives/` (first-principles building blocks) to `tooling/` (implementations and integration guides). `specs/` holds reference cards.
 - **R-2 Guarantees**: each domain decomposes into functions; desired properties are stated as guarantees with permanent IDs, declared as `### <ID>:` headings. Guarantees are descriptive, testable, and tagged with the CROPS letters they serve.
 - **R-3 Maturity tracking**: primitives and tooling carry a maturity level (`research`, `concept`, `testnet`, `production`). Maturity flips are the mechanism by which described properties graduate to documented best practices.
-- **R-4 Machine-readable structure**: frontmatter follows the per-type templates; cross-references use IDs and slugs, never restated text.
+- **R-4 Machine-readable structure**: frontmatter follows the per-type templates; cross-references use IDs and slugs, never restated text. A bare primitive slug in a guarantee block marks a planned card, tracked in this document's roadmap.
 - **R-5 Descriptive voice**: properties and facts, no recommendations, no RFC-2119 keywords, no named applications in gap descriptions.
 
 ## Non-goals
@@ -32,7 +32,7 @@ An open knowledge base that takes an application builder from their domain (wall
 ### Milestone 1: format proof
 
 - [ ] Wallet domain end-to-end: intro, W-1..W-5 guarantee blocks fully drafted, real end-user motivations.
-- [ ] First primitive cards: stealth addresses (W-2), PIR (W-1), mixnets (W-1). One card fully drafted before replicating.
+- [ ] First primitive cards: `stealth-addresses` (W-2), `pir` (W-1, W-3), `mixnets` (W-1). One card fully drafted before replicating.
 - [ ] Document anon-rpc: first `tooling/` card. Private RPC access, satisfies W-1; linked from the wallet domain's Ship it section.
 
 ### Milestone 2: breadth
@@ -47,6 +47,7 @@ An open knowledge base that takes an application builder from their domain (wall
   - [ ] `data-indexing`
   - [ ] `bridges`
 - [ ] Contribution guidelines (`CONTRIBUTING.md`): how to add a card, guarantee-ID rules, voice and formatting rules, review flow.
+- [ ] Primitive backlog from wallet.md: `light-clients` (W-4), `native-account-abstraction` (W-4), `transaction-simulation` (W-5).
 
 ### Milestone 3: publication
 
@@ -59,6 +60,7 @@ An open knowledge base that takes an application builder from their domain (wall
 
 ## Open questions
 
+- Domain taxonomy: app verticals (dex, payments, oracles) or the segments the team interfaces with (wallets, RPC/infra providers, L2s, dapps/SDKs, browsers/agents)? Neither list is settled.
 - Tooling scope: apps, open source libraries, open source tools, or all three? Treatment of open source tools with paid plans?
 - Specs scope: phase 1 likely references external specs only (permalinks pinned to commit or tag); specifying solutions here would be a phase 2 decision.
 - Full primitive list beyond the initial three.

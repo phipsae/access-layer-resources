@@ -20,4 +20,4 @@ Shared vocabulary is defined once in [GLOSSARY.md](./GLOSSARY.md).
 
 ## Scope and stance
 
-This repository is descriptive. It states properties, explains how they can be achieved, and records the state of the art and its maturity. It does not score, certify, or endorse specific applications or vendors.
+This repository is descriptive. It states properties, explains how they can be achieved, and records the available upgrade paths and their maturity. It does not score, certify, or endorse specific applications or vendors.

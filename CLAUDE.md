@@ -24,11 +24,14 @@ Primitives additionally carry `maturity`, `works-best-when` / `avoid-when`, `cro
 
 Maturity levels: `research` (papers only), `concept` (spec, no code), `testnet` (PoC or pilot), `production` (audited, sustained mainnet use).
 
-## Guarantee IDs
+## Guarantee IDs and block format
 
 - Domains declare guarantees as `### <ID>:` headings; the heading is the declaration. IDs are one uppercase letter per domain (W for wallet) plus a number.
 - IDs are permanent. Never renumber. A withdrawn guarantee keeps its ID and is marked withdrawn.
 - Primitives, tooling, and specs reference guarantees by ID in frontmatter and prose. This is the only cross-reference mechanism; do not restate guarantee text in other files.
+- Guarantee blocks are markdown with fixed `- **Field**:` bullets, never YAML frontmatter. Decision recorded 2026-08-17: markdown keeps the blocks readable, diffable, annotatable in review tools, and deep-linkable via heading anchors; the fixed field format keeps them machine-parseable.
+- In the Primitives field, mention primitives only as links to existing cards or as bare slugs in inline code. Every bare slug has a matching planned-card entry in [PRD.md](./PRD.md). A mention not worth a future card is not a primitive.
+- Guarantees carry no maturity rating. Maturity belongs to primitives and tooling (their frontmatter), one rating per path; a guarantee's achievability is narrated in its Upgrade path field and read off the linked cards.
 
 ## Cross-references
 
@@ -39,7 +42,19 @@ Maturity levels: `research` (papers only), `concept` (spec, no code), `testnet` 
 
 - Descriptive. State properties and facts. No RFC-2119 keywords (MUST, SHALL), no recommendations, no endorsements.
 - Use terms as defined in [GLOSSARY.md](./GLOSSARY.md); do not invent synonyms.
-- Never name specific applications when describing gaps or weaknesses. State of the art sections describe categories of behavior, not products.
+- Never name specific applications when describing gaps or weaknesses. Upgrade path fields describe routes and categories of behavior; implementations may be named as routes, never shamed as gaps.
+
+## No marketing language
+
+This repository describes; it never sells. Marketing tone destroys the credibility the repository exists to build.
+
+- Banned vocabulary, in any form: seamless, robust, powerful, cutting-edge, state-of-the-art, best-in-class, world-class, industry-leading, leading, next-generation, enterprise-grade, battle-tested, game-changing, revolutionary, groundbreaking, innovative, effortless, blazing, turnkey, holistic, unparalleled, unmatched, premier, ultimate, unprecedented.
+- Banned verbs of persuasion: unlock, empower, supercharge, elevate, streamline, transform, revolutionize, harness, leverage (as a verb).
+- No superlatives and no unverifiable adjectives. Every adjective must be checkable; if deleting it changes nothing verifiable, delete it.
+- Benefits are stated as properties with a mechanism ("queries leave no address-to-IP link because lookups run over PIR"), never as value claims ("gives users peace of mind").
+- No exclamation marks, no calls to action, no "just" or "simply".
+- Section and field names are plain nouns describing content, never persuasion framing. Precedent: "State of the art" was renamed "Upgrade path" because the name overclaimed.
+- The rule applies to everything in the repository, including templates, comments, and commit messages.
 
 ## Formatting
 

@@ -26,4 +26,4 @@ Guarantees are tagged with the bracketed letters of the properties they serve.
 - **Function**: one thing an application in a domain does (for a wallet: key management, network access, transaction broadcast, address management, discovery and safety features). Guarantees attach to functions.
 - **Primitive**: a first-principles building block (mixnet, shielding, PIR, stealth addresses) that provides one or more guarantees, characterized by its trust model and maturity.
 - **Maturity**: how deployable a primitive or tool is today. Levels: `research` (papers only, no usable implementation), `concept` (spec exists, no code), `testnet` (PoC or pilot implementations), `production` (audited implementations in sustained mainnet use).
-- **State of the art**: a descriptive account of how the ecosystem currently handles a guarantee, written without naming specific applications.
+- **Upgrade path**: a descriptive account of how a builder gets from today's default toward a guarantee: the routes that exist, how far each goes, and their tradeoffs.
