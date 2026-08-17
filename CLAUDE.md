@@ -20,7 +20,7 @@ guarantees: [W-1, W-3]   # IDs satisfied (primitives, tooling, specs; not domain
 ---
 ```
 
-Primitives additionally carry `maturity`, typed `related` cross-references, and optional `variants` for primitives whose flavors have diverging trust models. There is no per-card CROPS grading: the repository implies CROPS by design, and a primitive's letters follow from the guarantees it satisfies (decision 2026-08-17, after per-card grading was dropped as an iptf-map holdover). Post-quantum exposure is not frontmatter; it is stated in the card's Known limits section with its mitigation. Tooling carries `maturity`, `implements` (primitive slug), and the works/avoid pair.
+Primitives additionally carry `maturity`, typed `related` cross-references, and optional `variants` for primitives whose flavors have diverging trust models. There is no per-card CROPS grading: the repository implies CROPS by design, and a primitive's letters follow from the guarantees it satisfies (decision 2026-08-17, after per-card grading was dropped as an iptf-map holdover). Post-quantum exposure is not frontmatter; it is stated in the card's Known limits section with its mitigation. Tooling carries `maturity` and an optional `implements` list (primitive slugs the tool gives an app access to; slugs must resolve to cards).
 
 Maturity levels, rated for the primitive or tool itself wherever it runs (not only on Ethereum): `research` (papers only), `concept` (spec, no usable code), `usable` (working implementations, pilots, benchmarks), `production` (sustained real-world use anywhere).
 

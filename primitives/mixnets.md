@@ -45,7 +45,7 @@ One honest mix per route is enough: a single relay that genuinely delays and reo
 
 ## Implementations
 
-[Nym](https://github.com/nymtech/nym) has operated a general-purpose mixnet in production since 2022 (entry gateway, three mix layers, exit gateway); wallets reach it today through a SOCKS5 proxy rather than native integration. Tooling cards pending.
+[Nym](https://github.com/nymtech/nym) has operated a general-purpose mixnet in production since 2022 (entry gateway, three mix layers, exit gateway); wallets reach it today through a SOCKS5 proxy rather than native integration. For Ethereum RPC, [anon-rpc](../tooling/anon-rpc.md) exposes mixnets as one of its pluggable transports.
 
 ## Further reading
 

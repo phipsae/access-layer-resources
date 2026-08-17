@@ -33,7 +33,7 @@ An open knowledge base that takes an application builder from their domain (wall
 
 - [x] Wallet domain end-to-end: intro, W-1..W-5 guarantee blocks fully drafted.
 - [x] First primitive cards: `stealth-addresses` (W-2), `pir` (W-1, W-3), `mixnets` (W-1). One card fully drafted before replicating.
-- [ ] Document anon-rpc: first `tooling/` card. Private RPC access, satisfies W-1; linked from the wallet domain's Ship it section.
+- [x] Document anon-rpc: first `tooling/` card. Private RPC access, satisfies W-1; linked from the wallet domain's Ship it section.
 
 ### Milestone 2: breadth
 
@@ -62,6 +62,6 @@ An open knowledge base that takes an application builder from their domain (wall
 ## Open questions
 
 - Domain taxonomy: app verticals (dex, payments, oracles) or the segments the team interfaces with (wallets, RPC/infra providers, L2s, dapps/SDKs, browsers/agents)? Neither list is settled.
-- Tooling scope: apps, open source libraries, open source tools, or all three? Treatment of open source tools with paid plans?
+- ~~Tooling scope~~ (resolved 2026-08-17): open source software an application can integrate (libraries, SDKs, reference implementations, self-hostable services); end-user apps only via their integrable parts; paid hosted plans acceptable when the documented integration path is fully open source and self-hostable.
 - Specs scope: phase 1 likely references external specs only (permalinks pinned to commit or tag); specifying solutions here would be a phase 2 decision.
 - Full primitive list beyond the initial three.

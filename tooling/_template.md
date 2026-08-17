@@ -5,23 +5,21 @@ last_reviewed: YYYY-MM-DD
 # Maturity of this implementation (not of the underlying primitive):
 maturity: research | concept | usable | production
 
-# The primitive this tool implements. Slug matches primitives/<slug>.md.
-implements: <primitive-slug>
+# Optional: primitives this tool gives an app access to. Slugs match
+# primitives/<slug>.md and must resolve. Omit when no card applies.
+implements: [<primitive-slug>]
 
 # Guarantee IDs this tool satisfies when integrated as documented.
 guarantees: [W-1, W-3]
-
-works-best-when:
-  - <condition>
-avoid-when:
-  - <condition>
 ---
 
 # <Tool name>
 
-<!-- TODO: scope to be tightened before the first real card. Open questions:
-does tooling/ cover apps, open source libraries, open source tools, or all
-three? How do we treat an open source tool that also has a paid plan? -->
+<!-- Scope (decided 2026-08-17): tooling/ covers open source software an
+application can integrate: libraries, SDKs, reference implementations, and
+self-hostable services. End-user apps get cards only for their integrable
+parts. A tool with a paid hosted plan qualifies if the documented integration
+path is fully open source and self-hostable; the card states this plainly. -->
 
 ## What it implements
 
