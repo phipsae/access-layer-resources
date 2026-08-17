@@ -22,8 +22,8 @@ A wallet is the user's interface to Ethereum. It holds keys, builds and signs tr
 - **Property**: Network access does not reveal, to any single operator or observer, which addresses a user queries or controls, and does not tie those addresses to the user's IP address.
 - **Functions**: [Network access]
 - **Motivation**: A hosted RPC endpoint sees every balance check and every pending transaction, together with the IP they came from. Whoever runs it can build a financial profile of the user, sell it, or be forced to log it for someone else.
-- **Primitives**: `pir` for chain queries, `mixnets` for network-level cover.
-- **Upgrade path**: Light clients (Helios, Colibri, both packaged in the Kohaku provider layer) verify chain data locally, which removes trust in the endpoint's answers; the endpoint still sees which addresses are queried. PIR for chain queries, which would close that leak, remains research.
+- **Primitives**: [pir](../primitives/pir.md) for chain queries, [mixnets](../primitives/mixnets.md) for network-level cover.
+- **Upgrade path**: Light clients (Helios, Colibri, both packaged in the Kohaku provider layer) verify chain data locally, which removes trust in the endpoint's answers; the endpoint still sees which addresses are queried. PIR for chain queries, which would close that leak, is at the pilot stage: the EF Private Reads program targets a first deployment over live state in Q4 2026.
 
 ### W-2: Address-to-address unlinkability [P]
 
@@ -38,7 +38,7 @@ A wallet is the user's interface to Ethereum. It holds keys, builds and signs tr
 - **Property**: Usage data (addresses, balances, history, dapp activity, feature usage) leaves the device only with the user's explicit consent, given per destination and purpose.
 - **Functions**: [Discovery and safety features]
 - **Motivation**: A wallet sees trading intent before anything touches the mempool. Usage data that leaves the device lets its recipient link the user's trading patterns and extract value from their order flow, front-running them without ever reading public chain data.
-- **Primitives**: `pir` where a lookup has to leave the device; local-first design covers the rest and needs no card.
+- **Primitives**: [pir](../primitives/pir.md) where a lookup has to leave the device; local-first design covers the rest and needs no card.
 - **Upgrade path**: Achievable today by design: keep processing local and gate each outbound lookup on explicit consent.
 
 ### W-4: Zero option on every intermediated path [CR]

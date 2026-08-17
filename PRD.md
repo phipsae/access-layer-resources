@@ -17,7 +17,7 @@ An open knowledge base that takes an application builder from their domain (wall
 
 - **R-1 Content model**: four content types with a fixed flow. `domains/` (entry point: functions and guarantees) to `primitives/` (first-principles building blocks) to `tooling/` (implementations and integration guides). `specs/` holds reference cards.
 - **R-2 Guarantees**: each domain decomposes into functions; desired properties are stated as guarantees with permanent IDs, declared as `### <ID>:` headings. Guarantees are descriptive, testable, and tagged with the CROPS letters they serve.
-- **R-3 Maturity tracking**: primitives and tooling carry a maturity level (`research`, `concept`, `testnet`, `production`). Maturity flips are the mechanism by which described properties graduate to documented best practices.
+- **R-3 Maturity tracking**: primitives and tooling carry a maturity level (`research`, `concept`, `usable`, `production`), rated for the primitive itself wherever it runs, not only on Ethereum. Maturity flips are the mechanism by which described properties graduate to documented best practices.
 - **R-4 Machine-readable structure**: frontmatter follows the per-type templates; cross-references use IDs and slugs, never restated text. A bare primitive slug in a guarantee block marks a planned card, tracked in this document's roadmap.
 - **R-5 Descriptive voice**: properties and facts, no recommendations, no RFC-2119 keywords, no named applications in gap descriptions.
 
@@ -32,7 +32,7 @@ An open knowledge base that takes an application builder from their domain (wall
 ### Milestone 1: format proof
 
 - [x] Wallet domain end-to-end: intro, W-1..W-5 guarantee blocks fully drafted.
-- [ ] First primitive cards: `stealth-addresses` (W-2), `pir` (W-1, W-3), `mixnets` (W-1). One card fully drafted before replicating.
+- [x] First primitive cards: `stealth-addresses` (W-2), `pir` (W-1, W-3), `mixnets` (W-1). One card fully drafted before replicating.
 - [ ] Document anon-rpc: first `tooling/` card. Private RPC access, satisfies W-1; linked from the wallet domain's Ship it section.
 
 ### Milestone 2: breadth

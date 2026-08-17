@@ -2,24 +2,15 @@
 name: <primitive-slug>
 last_reviewed: YYYY-MM-DD
 
-# Maturity of the primitive itself:
+# Maturity of the primitive itself, wherever it runs (not only on Ethereum):
 #   research   - papers only, no usable implementation
-#   concept    - spec exists, no code
-#   testnet    - PoC or pilot implementations
-#   production - audited implementations in sustained mainnet use
-maturity: research | concept | testnet | production
+#   concept    - spec exists, no usable code
+#   usable     - working implementations, pilots, benchmarks
+#   production - sustained real-world use anywhere
+maturity: research | concept | usable | production
 
 # Guarantee IDs this primitive can satisfy, defined in domains/.
 guarantees: [W-1]
-
-# CROPS grades. The grade stands alone when self-evident. When it needs
-# context (a caveat, a mitigation, where it drifts in practice), append it
-# after the grade: "partial: <justification or mitigation>".
-crops:
-  cr: high | medium | low | none
-  o: yes | partial | no
-  p: full | partial | none
-  s: high | medium | low
 
 # Typed cross-references to other primitives. Slugs match
 # primitives/<slug>.md and must resolve to an existing file.

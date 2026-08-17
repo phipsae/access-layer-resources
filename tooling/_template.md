@@ -3,7 +3,7 @@ name: <tool-slug>
 last_reviewed: YYYY-MM-DD
 
 # Maturity of this implementation (not of the underlying primitive):
-maturity: research | concept | testnet | production
+maturity: research | concept | usable | production
 
 # The primitive this tool implements. Slug matches primitives/<slug>.md.
 implements: <primitive-slug>

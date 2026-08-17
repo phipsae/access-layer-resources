@@ -4,15 +4,9 @@ last_reviewed: 2026-08-17
 maturity: production
 guarantees: [W-2]
 
-crops:
-  cr: high
-  o: yes
-  p: "partial: hides the recipient link only; sender, amount, and timing stay public, and the network layer can re-link what the chain does not"
-  s: "medium: no new custody risk, but derivation bugs or a leaked viewing key silently degrade the guarantee"
-
 related:
   requires: []
-  composes_with: []
+  composes_with: [pir, mixnets]
   alternative_to: []
   see_also: []
 ---
