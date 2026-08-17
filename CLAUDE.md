@@ -26,7 +26,7 @@ Maturity levels, rated for the primitive or tool itself wherever it runs (not on
 
 ## Guarantee IDs and block format
 
-- Domains declare guarantees as `### <ID>:` headings; the heading is the declaration. IDs are one uppercase letter per domain (W for wallet) plus a number.
+- Domains declare guarantees as `### <ID>:` headings; the heading is the declaration. IDs are one uppercase letter per domain plus a number. Reserved letters: W wallet, D defi, P payments, I identity, O oracle, X data-indexing, R rollup, G governance.
 - IDs are permanent. Never renumber. A withdrawn guarantee keeps its ID and is marked withdrawn.
 - Primitives, tooling, and specs reference guarantees by ID in frontmatter and prose. This is the only cross-reference mechanism; do not restate guarantee text in other files.
 - Guarantee blocks are markdown with fixed `- **Field**:` bullets, never YAML frontmatter. Decision recorded 2026-08-17: markdown keeps the blocks readable, diffable, annotatable in review tools, and deep-linkable via heading anchors; the fixed field format keeps them machine-parseable.

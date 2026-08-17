@@ -37,18 +37,20 @@ An open knowledge base that takes an application builder from their domain (wall
 
 ### Milestone 2: breadth
 
-- [ ] Domain stubs, one file per important domain. Proposed list, to validate:
-  - [x] `wallet`
-  - [ ] `dex`
-  - [ ] `payments`
-  - [ ] `oracles`
-  - [ ] `identity`
-  - [ ] `messaging`
-  - [ ] `data-indexing`
-  - [ ] `bridges`
+- [x] Domain stubs, one file per domain. Taxonomy validated 2026-08-17: a domain earns a page when its functions decompose differently and its guarantees are not a copy of another domain's. Bridges folded into `rollup`; naming folded into `identity`.
+  - [x] `wallet` (functions and guarantees done)
+  - [x] `defi`
+  - [x] `payments`
+  - [x] `identity`
+  - [x] `oracle`
+  - [x] `data-indexing`
+  - [x] `rollup`
+  - [x] `governance`
+- [ ] Fill functions and guarantees per domain: `defi`, `payments`, `identity`, `oracle`, `data-indexing`, `rollup`, `governance`.
 - [ ] Contribution guidelines (`CONTRIBUTING.md`): how to add a card, guarantee-ID rules, voice and formatting rules, review flow.
 - [ ] Primitive backlog from wallet.md: `light-clients` (W-4), `native-account-abstraction` (W-4), `transaction-simulation` (W-5).
 - [ ] Wallet guarantee candidates, parked pending sharper framing: private transfers (must read as a goal layered on a transparent-by-default L1, never as a default), key custody and recovery (open question: one merged key-access-lifecycle guarantee or two).
+- [ ] Messaging domain, parked pending a sharper builder audience; revisit with XMTP, Status (Waku), and Push Protocol as the concrete apps.
 
 ### Milestone 3: publication
 
@@ -61,7 +63,7 @@ An open knowledge base that takes an application builder from their domain (wall
 
 ## Open questions
 
-- Domain taxonomy: app verticals (dex, payments, oracles) or the segments the team interfaces with (wallets, RPC/infra providers, L2s, dapps/SDKs, browsers/agents)? Neither list is settled.
+- ~~Domain taxonomy~~ (resolved 2026-08-17): eight app-vertical domains (wallet, defi, payments, identity, oracle, data-indexing, rollup, governance); messaging parked; bridges and naming folded into rollup and identity.
 - ~~Tooling scope~~ (resolved 2026-08-17): open source software an application can integrate (libraries, SDKs, reference implementations, self-hostable services); end-user apps only via their integrable parts; paid hosted plans acceptable when the documented integration path is fully open source and self-hostable.
 - Specs scope: phase 1 likely references external specs only (permalinks pinned to commit or tag); specifying solutions here would be a phase 2 decision.
 - Full primitive list beyond the initial three.
