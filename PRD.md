@@ -46,9 +46,16 @@ An open knowledge base that takes an application builder from their domain (wall
   - [x] `data-indexing`
   - [x] `rollup`
   - [x] `governance`
-- [ ] Fill functions and guarantees per domain: `defi`, `payments`, `identity`, `oracle`, `data-indexing`, `rollup`, `governance`.
+- [ ] Fill functions and guarantees per domain:
+  - [x] `defi`
+  - [ ] `payments`
+  - [ ] `identity`
+  - [ ] `oracle`
+  - [ ] `data-indexing`
+  - [ ] `rollup`
+  - [ ] `governance`
 - [x] Contribution guidelines (`CONTRIBUTING.md`): how to add a card, guarantee-ID rules, voice and formatting rules, review flow.
-- [ ] Primitive backlog from wallet.md: `light-clients` (W-4), `native-account-abstraction` (W-4), `transaction-simulation` (W-5).
+- [ ] Primitive backlog: `light-clients` (W-4), `native-account-abstraction` (W-4), `transaction-simulation` (W-5), `encrypted-mempools` (D-1), `shielded-pools` (D-2), `content-addressed-hosting` (D-3).
 - [ ] Wallet guarantee candidates, parked pending sharper framing: private transfers (must read as a goal layered on a transparent-by-default L1, never as a default), key custody and recovery (open question: one merged key-access-lifecycle guarantee or two).
 - [ ] Messaging domain, parked pending a sharper builder audience; revisit with XMTP, Status (Waku), and Push Protocol as the concrete apps.
 
