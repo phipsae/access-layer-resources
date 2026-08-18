@@ -47,19 +47,19 @@ An open knowledge base that takes an application builder from their domain (wall
   - [x] `rollup`
   - [x] `governance`
 - [ ] Fill functions and guarantees per domain: `defi`, `payments`, `identity`, `oracle`, `data-indexing`, `rollup`, `governance`.
-- [ ] Contribution guidelines (`CONTRIBUTING.md`): how to add a card, guarantee-ID rules, voice and formatting rules, review flow.
+- [x] Contribution guidelines (`CONTRIBUTING.md`): how to add a card, guarantee-ID rules, voice and formatting rules, review flow.
 - [ ] Primitive backlog from wallet.md: `light-clients` (W-4), `native-account-abstraction` (W-4), `transaction-simulation` (W-5).
 - [ ] Wallet guarantee candidates, parked pending sharper framing: private transfers (must read as a goal layered on a transparent-by-default L1, never as a default), key custody and recovery (open question: one merged key-access-lifecycle guarantee or two).
 - [ ] Messaging domain, parked pending a sharper builder audience; revisit with XMTP, Status (Waku), and Push Protocol as the concrete apps.
 
 ### Milestone 3: publication
 
-- [ ] Markdown lint: markdownlint config and CI job.
-- [ ] Prose lint: Vale styles for glossary terminology consistency and marketing-language bans.
-- [ ] Link check: lychee or equivalent CI action, internal and external links.
-- [ ] Frontmatter and guarantee-ID validation: small CI step checking frontmatter fields, guarantee IDs resolving to a domain heading, no duplicate IDs, and `related`/`implements` slugs resolving to files.
-- [ ] License.
-- [ ] GitHub org and go-public timing.
+- [x] Markdown lint: markdownlint config and CI job.
+- [ ] Prose lint: Vale styles for glossary terminology consistency and marketing-language bans. Deferred 2026-08-18: minimal stack chosen; revisit if outside contributions grow.
+- [x] Link check: lychee CI action, internal and external links.
+- Frontmatter and guarantee-ID validation: deliberately not built (2026-08-18). Structural checks (frontmatter fields, ID resolution, no duplicate IDs, `related`/`implements` slugs resolving) are a manual gate at draft time; the minimal lint stack keeps custom code out of the repo.
+- [x] License: CC0 1.0.
+- [x] GitHub org and go-public: pushed 2026-08-17 to `ethereum/app-enablement-resources`.
 
 ## Open questions
 

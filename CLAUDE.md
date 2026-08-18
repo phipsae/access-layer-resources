@@ -24,6 +24,8 @@ Primitives additionally carry `maturity`, typed `related` cross-references, and 
 
 Maturity levels, rated for the primitive or tool itself wherever it runs (not only on Ethereum): `research` (papers only), `concept` (spec, no usable code), `usable` (working implementations, pilots, benchmarks), `production` (sustained real-world use anywhere).
 
+Automated checks are markdownlint and lychee (configs at the repo root, run by `.github/workflows/lint.yml`). Structural validation (frontmatter fields, guarantee-ID resolution, slug resolution, no duplicate IDs) is a manual gate at draft time by decision (2026-08-18); do not add custom validation scripts.
+
 ## Guarantee IDs and block format
 
 - Domains declare guarantees as `### <ID>:` headings; the heading is the declaration. IDs are one uppercase letter per domain plus a number. Reserved letters: W wallet, D defi, P payments, I identity, O oracle, X data-indexing, R rollup, G governance.

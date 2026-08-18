@@ -1,0 +1,12 @@
+{
+  // Lint config for the knowledge base. Prose lives on long lines; templates
+  // carry HTML comments and <placeholder> tokens; cards repeat section names.
+  "config": {
+    "default": true,
+    "MD013": false, // line length: prose is written one sentence per line or long paragraphs
+    "MD033": false, // inline HTML: templates use HTML comments and <placeholders>
+    "MD024": { "siblings_only": true } // duplicate headings: every card repeats the same section names
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules/**"]
+}
