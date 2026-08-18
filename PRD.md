@@ -49,13 +49,13 @@ An open knowledge base that takes an application builder from their domain (wall
 - [ ] Fill functions and guarantees per domain:
   - [x] `defi`
   - [x] `payments`
-  - [ ] `identity`
+  - [x] `identity`
   - [ ] `oracle`
   - [ ] `data-indexing`
   - [x] `rollup`
   - [ ] `governance`
 - [x] Contribution guidelines (`CONTRIBUTING.md`): how to add a card, guarantee-ID rules, voice and formatting rules, review flow.
-- [ ] Primitive backlog: `light-clients` (W-4), `native-account-abstraction` (W-4), `transaction-simulation` (W-5), `encrypted-mempools` (D-1), `shielded-pools` (D-2), `content-addressed-hosting` (D-3), `based-sequencing` (R-1), `decentralized-sequencing` (R-1), `validity-proofs` (R-3), `fraud-proofs` (R-3), `data-availability-sampling` (R-4), `private-rollups` (R-5).
+- [ ] Primitive backlog: `light-clients` (W-4), `native-account-abstraction` (W-4), `transaction-simulation` (W-5), `encrypted-mempools` (D-1), `shielded-pools` (D-2), `content-addressed-hosting` (D-3), `based-sequencing` (R-1), `decentralized-sequencing` (R-1), `validity-proofs` (R-3), `fraud-proofs` (R-3), `data-availability-sampling` (R-4), `private-rollups` (R-5), `anonymous-credentials` (I-1, I-3, I-5), `zk-group-membership` (I-4, I-5).
 - [ ] Wallet guarantee candidates, parked: key custody and recovery (open question: one merged key-access-lifecycle guarantee or two). Private transfers RESOLVED 2026-08-18: landed as payments P-1 with the required layered-on-transparent-L1 framing.
 - [ ] Messaging domain, parked pending a sharper builder audience; revisit with XMTP, Status (Waku), and Push Protocol as the concrete apps.
 
