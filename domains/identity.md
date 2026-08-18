@@ -30,7 +30,7 @@ Identity applications let users prove things about themselves: names, credential
 - **Functions**: [Issuing credentials and attestations, Naming]
 - **Motivation**: An identity system with one root issuer is a permission system wearing a different name. Whoever controls issuance controls entry, pricing, and exile, and history says that control gets used.
 - **Primitives**: None carded; attestation plurality and combination approaches are design practices.
-- **Upgrade path**: Accept several ground truths per claim (document proofs, social-graph attestations, on-chain history) and weight them rather than requiring one. Naming has a production registry whose records only the owner controls, though names are leases: standing lapses on non-renewal, a failure mode issuer goodwill does not cover.
+- **Upgrade path**: Accept several ground truths per claim (document proofs, social-graph attestations, on-chain history) and weight them rather than requiring one. 
 
 ### I-3: Local, non-custodial proving [S, CR]
 
@@ -45,7 +45,7 @@ Identity applications let users prove things about themselves: names, credential
 - **Property**: Where the need is only sybil resistance or making abuse expensive, the app offers a non-identity path: proof of deposit, proof of stake or holdings, or anonymous membership in a vetted group.
 - **Functions**: [Membership and sybil resistance]
 - **Motivation**: Demanding official identity for rate-limiting is paying for a fence with a census. The app inherits identity's exclusions (no document, wrong document, revoked document) for a problem a bond would have solved.
-- **Primitives**: `zk-group-membership` for anonymous membership with double-use protection; zero-knowledge deposits are practice, no card.
+- **Primitives**: `zk-group-membership` for anonymous membership with double-use protection; `oprf` for anonymous rate-limiting tokens; zero-knowledge deposits are practice, no card.
 - **Upgrade path**: Anonymous group membership with double-signaling protection is mature and in sustained use. The open design question is bootstrapping group inclusion without recreating an issuer at the gate.
 
 ### I-5: Unlinkable reuse [P]
@@ -53,7 +53,7 @@ Identity applications let users prove things about themselves: names, credential
 - **Property**: Presenting the same identity or credential twice, to the same verifier or different ones, yields proofs that cannot be linked to each other. Unlinkability from the issuance event additionally requires blind or hidden issuance; document-based proofs keep an issuer-side link to the source document. Where double-use must be blocked, per-context identifiers prevent it without enabling correlation across contexts.
 - **Functions**: [Proving claims, Membership and sybil resistance]
 - **Motivation**: A reusable identifier turns every verification into a tracking event. Verifiers who compare notes reconstruct the user's path through services, which is the profile I-1's field-hiding tried to prevent; hiding the fields achieves little if the pattern of use stays visible.
-- **Primitives**: `anonymous-credentials` for multi-show unlinkability; `zk-group-membership` for scoped nullifiers.
+- **Primitives**: `anonymous-credentials` for multi-show unlinkability; `zk-group-membership` for scoped nullifiers; `oprf` where unique per-context identifiers must be issued without the issuer learning them.
 - **Upgrade path**: Scoped nullifiers are standard in mature membership protocols. Multi-show unlinkable credential schemes exist and are entering ZK credential stacks; single-show designs that re-issue per use leak usage volume to the issuer, a tradeoff worth stating.
 
 ## Ship it
