@@ -30,7 +30,7 @@ Identity applications let users prove things about themselves: names, credential
 - **Functions**: [Issuing credentials and attestations, Naming]
 - **Motivation**: An identity system with one root issuer is a permission system wearing a different name. Whoever controls issuance controls entry, pricing, and exile, and history says that control gets used.
 - **Primitives**: None carded; attestation plurality and combination approaches are design practices.
-- **Upgrade path**: Accept several ground truths per claim (document proofs, social-graph attestations, on-chain history) and weight them rather than requiring one. 
+- **Upgrade path**: Accept several ground truths per claim (document proofs, social-graph attestations, on-chain history) and weight them rather than requiring one.
 
 ### I-3: Local, non-custodial proving [S, CR]
 
