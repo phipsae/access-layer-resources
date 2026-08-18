@@ -22,7 +22,7 @@ Toward W-1 this covers the IP side: the endpoint answering the query no longer l
 3. [app] Receives an anonymized `fetch` and issues ordinary JSON-RPC calls through it. The anonymization network follows from which specifier the app points at; the harness picks the carrier (WebRTC in browsers, QUIC natively).
 4. [app] Treats the on-chain hash as the only trust anchor; resolver URLs and CDNs are unverified conveniences.
 
-The [wallet integration guide](https://privacy-ethereum.github.io/anon-rpc/) covers specifier resolution, storage scoping, and worker updates.
+The [wallet integration guide](https://ethereum.github.io/anon-rpc/) covers specifier resolution, storage scoping, and worker updates.
 
 ## Audit and maturity status
 
@@ -30,4 +30,4 @@ Draft specification (v0.3.0, July 2026) and reference prototype, first published
 
 ## Maintainer
 
-The EF privacy team, under the [privacy-ethereum](https://github.com/privacy-ethereum) organization. Code and spec at [privacy-ethereum/anon-rpc](https://github.com/privacy-ethereum/anon-rpc) (MIT, TypeScript); background in the [announcement post](https://reads.ethereum.foundation/feed/anon-rpc/).
+The EF privacy team. Code and spec at [ethereum/anon-rpc](https://github.com/ethereum/anon-rpc) (MIT, TypeScript; migrated from the privacy-ethereum organization in 2026); background in the [announcement post](https://reads.ethereum.foundation/feed/anon-rpc/).
