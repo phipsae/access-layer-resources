@@ -46,7 +46,7 @@ Oracles bring off-chain facts on chain: prices, events, randomness. Everything d
 - **Property**: When an app needs a fact about a user's off-chain data (a balance, a rating, an account attribute), the user proves the fact from their own session. The oracle operator never holds the user's credentials and never sees more than the proven predicate.
 - **Functions**: [User-data attestation]
 - **Motivation**: The naive design routes the user's login through the oracle operator, turning one app's need for one fact into a custodian of everyone's accounts. The operator becomes the honeypot and the chokepoint at once.
-- **Primitives**: `tls-oracles`; overlaps deliberately with identity's `anonymous-credentials`, since a web proof is a credential whose issuer never signed up to be one.
+- **Primitives**: `tls-oracles`; overlaps deliberately with identity's [anonymous-credentials](../primitives/anonymous-credentials.md), since a web proof is a credential whose issuer never signed up to be one.
 - **Upgrade path**: Production web-proof stacks run the proving circuit on the user's device, over the user's own TLS session, in seconds, with an attestor participating as a live witness. The trust residues to state are the proxy or notary position in each scheme (forgery on collusion, censorship; never plaintext exposure) and the source site's ability to change formats or block the proof path.
 
 ## Ship it
