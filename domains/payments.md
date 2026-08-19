@@ -21,7 +21,7 @@ Payment applications move value between people and businesses: transfers, invoic
 - **Property**: Paying someone reveals neither the payer's balance and history to the payee, nor the payment relationship to anyone else. The privacy is a layer the application provides on a transparent-by-default L1, never an assumed default.
 - **Functions**: [Sending and receiving payments]
 - **Motivation**: A salary paid to a public address publishes the recipient's net worth to their employer, and every merchant sees the full history behind the address that pays them. Cash never did this; a payment app that does is leaking by design.
-- **Primitives**: [stealth-addresses](../primitives/stealth-addresses.md) for receiving without a reusable identity; `shielded-pools` for amounts and balances.
+- **Primitives**: [stealth-addresses](../primitives/stealth-addresses.md) for receiving without a reusable identity; [shielded-pools](../primitives/shielded-pools.md) for amounts and balances.
 - **Upgrade path**: Stealth-address payments run in production with minimal wallet-native support. Shielded pools cover amount privacy, with the anonymity set as the binding limit. The funding-link and scanning costs from the stealth-addresses card apply to payments in full.
 
 ### P-2: No intermediary can block a payment [CR]

@@ -22,7 +22,7 @@ Rollups execute transactions off Ethereum L1 and settle back to it. The domain h
 - **Property**: A user can get a transaction included and executed without the sequencer's cooperation, within a bounded delay, at a cost that keeps the right practical.
 - **Functions**: [Sequencing]
 - **Motivation**: The top rollups by value all run a single sequencer today. Where the proof system is live it cannot steal, but it can refuse and reorder, and a refused transaction is a frozen account for as long as the refusal lasts; with a liquidation pending, the delay is the loss.
-- **Primitives**: `based-sequencing`; `decentralized-sequencing`; L1 force-inclusion queues are protocol design, prose only.
+- **Primitives**: `based-sequencing`; `decentralized-sequencing`; [encrypted-mempools](../primitives/encrypted-mempools.md), which blind content-based filtering; L1 force-inclusion queues are protocol design, prose only.
 - **Upgrade path**: Force-inclusion queues exist on most major rollups, with delay windows from half a day to a day, and at least one major rollup ships none at all; the cost and timing limits of the forced path are the differentiator. Based sequencing inherits L1's inclusion properties for hard inclusion, with preconfirmations reintroducing a weaker trust assumption for fast UX. Decentralized sequencer sets remove the single operator, and the first permissionless set is live.
 
 ### R-2: Exit without the operator [CR, S]

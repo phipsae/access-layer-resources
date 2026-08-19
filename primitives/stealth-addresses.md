@@ -6,7 +6,7 @@ guarantees: [W-2]
 
 related:
   requires: []
-  composes_with: [pir, mixnets]
+  composes_with: [pir, mixnets, shielded-pools]
   alternative_to: []
   see_also: []
 ---
