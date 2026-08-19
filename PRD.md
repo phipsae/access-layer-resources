@@ -68,15 +68,15 @@ An open knowledge base that takes an application builder from their domain (wall
 
 ### Milestone 4: integration guides
 
-Tooling cards, harvested from the domains' Ship it sections. Cards land when the integration path is real per the tooling scope; the gates below keep announcements from counting as availability.
+Tooling cards, harvested from the domains' Ship it sections; the [ethereum.org developer-tools directory](https://ethereum.org/developers/tools/) is a standing candidate source. Cards land when the integration path is real per the tooling scope; the gates below keep announcements from counting as availability.
 
 - [x] anon-rpc (W-1, X-1): done, the format proof.
-- [ ] kohaku: the wallet SDK surface (W-5 safety controls; D-2 and P-1 shielded-pool plugins; Railgun plugin operational, Privacy Pools in development).
-- [ ] Light-client integration: Helios and Colibri via the Kohaku provider layer (W-4, P-4, X-2).
-- [ ] Stealth payments: fluidkey-stealth-account-kit (W-2, P-1).
-- [ ] Anonymous membership: Semaphore (I-4, I-5).
-- [ ] Web proofs: Reclaim and TLSNotary (O-3, O-4).
-- [ ] Encrypted-mempool access: Shutter opt-in RPC (D-1; Gnosis today, Ethereum PBS path).
+- [x] kohaku: the wallet SDK surface (W-5 safety controls; D-2 and P-1 shielded-pool plugins; Railgun plugin operational, Privacy Pools in development).
+- [x] Light-client integration: Helios and Colibri via the Kohaku provider layer (W-4, P-4, X-2); covered by the kohaku card.
+- [x] Stealth payments: fluidkey-stealth-account-kit (W-2, P-1).
+- [x] Anonymous membership: Semaphore (I-4, I-5).
+- [x] Web proofs: TLSNotary (O-3, O-4). Reclaim excluded 2026-08-19: components of its documented integration path (the Solidity verifier among them) carry no license file, which fails the tooling scope's open-source requirement; AGPL parts are fine per the mandate. Revisit when licensed.
+- [x] Encrypted-mempool access: Shutter opt-in RPC (D-1; Gnosis today, Ethereum PBS path).
 - [ ] Private voting: the MACI Aragon plugin (G-1, G-3; gate: past demo stage).
 - [ ] PIR endpoint tooling (W-1, X-1; gate: PIR Genesis, targeted Q4 2026).
 

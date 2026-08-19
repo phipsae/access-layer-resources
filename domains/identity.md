@@ -60,4 +60,4 @@ Identity applications let users prove things about themselves: names, credential
 
 Integration guides by guarantee, added as tooling cards land:
 
-- I-4, I-5: anonymous group-membership tooling (card pending)
+- I-4, I-5: [semaphore](../tooling/semaphore.md)

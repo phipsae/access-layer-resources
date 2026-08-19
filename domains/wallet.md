@@ -62,4 +62,4 @@ A wallet is the user's interface to Ethereum. It holds keys, builds and signs tr
 Integration guides by guarantee, added as tooling cards land:
 
 - W-1: [anon-rpc](../tooling/anon-rpc.md)
-- W-5: Kohaku SDK (tooling card pending)
+- W-5: [kohaku](../tooling/kohaku.md)

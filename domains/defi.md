@@ -53,5 +53,5 @@ DeFi applications let users trade, lend, borrow, and provide liquidity through s
 
 Integration guides by guarantee, added as tooling cards land:
 
-- D-1: encrypted-mempool tooling (card pending)
-- D-2: shielded-pool tooling (cards pending; the Kohaku plugins are candidates)
+- D-1: [shutter-rpc](../tooling/shutter-rpc.md)
+- D-2: [kohaku](../tooling/kohaku.md)

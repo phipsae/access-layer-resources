@@ -53,4 +53,4 @@ Oracles bring off-chain facts on chain: prices, events, randomness. Everything d
 
 Integration guides by guarantee, added as tooling cards land:
 
-- O-4: web-proof tooling (cards pending)
+- O-4: [tlsnotary](../tooling/tlsnotary.md)

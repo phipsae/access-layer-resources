@@ -23,18 +23,16 @@ path is fully open source and self-hostable; the card states this plainly. -->
 
 ## What it implements
 
-The [primitive](../primitives/) this tool implements, and how faithfully: any deviations from the primitive's ideal trust model (hosted components, default endpoints, telemetry) belong here, stated plainly.
+One or two sentences: the [primitive](../primitives/) and guarantees this tool delivers, with any deviation from the ideal trust model in one clause. Body target for the whole card: under 250 words.
 
 ## Integration guide
 
-The shortest credible path from zero to the guarantee holding in production: prerequisites, steps, and a minimal example. Steps carry actor tags where multiple parties are involved: `[app]`, `[user]`, `[contract]`, `[relayer]`.
-
-This section is the reason the repository exists; keep it current.
+A map, never a tutorial: prerequisites in one line, at most four one-line steps, and the canonical docs link. The docs are the guide; this card is the map to them.
 
 ## Audit and maturity status
 
-Audit reports (linked), production usage, maintenance status. Facts only, no endorsement.
+One or two lines, facts only: audits (linked), production evidence, license.
 
 ## Maintainer
 
-Who builds and maintains this, with links to the repository and documentation.
+Who maintains it, the repository, the docs, and the [ethereum.org developer-tools](https://ethereum.org/developers/tools/) page where one exists.

@@ -1,6 +1,6 @@
 ---
 name: anon-rpc
-last_reviewed: 2026-08-17
+last_reviewed: 2026-08-19
 maturity: usable
 guarantees: [W-1]
 ---
@@ -9,25 +9,23 @@ guarantees: [W-1]
 
 ## What it implements
 
-anon-rpc is a standard, with a reference implementation, for making anonymized RPC requests from a browser context. It targets the gateway problem: browser-to-Ethereum traffic runs through a small set of HTTPS gateways and node-as-a-service providers, each able to log which addresses an IP asks about, and each able to refuse service.
-
-The mechanism is a hash-pinned worker. A specifier contract publishes the hash of a worker bundle, with optional resolver entries (HTTPS URLs or KPS addresses); the harness fetches the bundle from any source, accepts any byte stream that matches the pinned hash, and runs it in a Web Worker inside a null-origin sandboxed iframe. The worker gets a minimal capability API (serving the host's fetch calls, outbound KPS connections, logging, scoped storage) and nothing else: no DOM, no wallet keys, no host identity. The spec and prototype ship one transport, KPS; [mixnets](../primitives/mixnets.md), Tor, and direct WebRTC links to node operators are the anonymization layers the design anticipates, each behind its own hash-pinned worker.
-
-Toward W-1 this covers the IP side: the endpoint answering the query no longer learns who asked. It does not hide what was asked; the query content stays visible to the serving node, and [pir](../primitives/pir.md) is the complement being built in the same EF Private Reads workstream. Two further deviations from the ideal: bootstrapping needs a pre-existing RPC connection to read the specifier contract, and only a browser harness is implemented so far, though the spec provides for native ones (KPS over QUIC).
+A standard, with a reference implementation, for anonymized RPC from a browser: a hash-pinned worker runs in a null-origin sandbox with a minimal capability API, and requests route over pluggable anonymization transports ([mixnets](../primitives/mixnets.md) anticipated; KPS shipped). It covers the IP side of W-1 only: the endpoint still reads the query content ([pir](../primitives/pir.md) is the complement), bootstrapping needs a pre-existing RPC connection, and only a browser harness exists so far.
 
 ## Integration guide
 
-1. [app] Installs the reference browser harness and points it at a specifier contract address.
-2. [harness] Reads the pinned worker hash on chain, fetches the bundle from a resolver or mirror, verifies the hash, and starts the worker in its sandbox.
-3. [app] Receives an anonymized `fetch` and issues ordinary JSON-RPC calls through it. The anonymization network follows from which specifier the app points at; the harness picks the carrier (WebRTC in browsers, QUIC natively).
-4. [app] Treats the on-chain hash as the only trust anchor; resolver URLs and CDNs are unverified conveniences.
+Prerequisite: a browser context and a specifier contract address.
 
-The [wallet integration guide](https://ethereum.github.io/anon-rpc/) covers specifier resolution, storage scoping, and worker updates.
+1. [app] Install the reference browser harness and point it at the specifier.
+2. [harness] Reads the pinned hash on chain, fetches and verifies the bundle, sandboxes the worker.
+3. [app] Issues ordinary JSON-RPC calls through the returned anonymized `fetch`.
+4. [app] Trusts the on-chain hash only; resolvers and CDNs are unverified conveniences.
+
+The [wallet integration guide](https://ethereum.github.io/anon-rpc/) and [SPEC.md](https://github.com/ethereum/anon-rpc) are the guide.
 
 ## Audit and maturity status
 
-Draft specification (v0.3.0, July 2026) and reference prototype, first published June 2026. No security audits and no production deployments; an audit sits on the workstream's Q3 2026 roadmap. Part of the EF Private Reads workstream, positioned by its authors within the Abstract Access Layer work.
+Draft specification (v0.3.0, July 2026) and reference prototype; no audits and no production deployments, with an audit on the workstream's Q3 2026 roadmap. MIT, TypeScript.
 
 ## Maintainer
 
-The EF privacy team. Code and spec at [ethereum/anon-rpc](https://github.com/ethereum/anon-rpc) (MIT, TypeScript; migrated from the privacy-ethereum organization in 2026); background in the [announcement post](https://reads.ethereum.foundation/feed/anon-rpc/).
+The EF privacy team, at [ethereum/anon-rpc](https://github.com/ethereum/anon-rpc) (migrated from privacy-ethereum in 2026); background in the [announcement post](https://reads.ethereum.foundation/feed/anon-rpc/).

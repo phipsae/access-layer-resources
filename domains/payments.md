@@ -52,4 +52,4 @@ Payment applications move value between people and businesses: transfers, invoic
 
 Integration guides by guarantee, added as tooling cards land:
 
-- P-1: stealth-address payment tooling (card pending)
+- P-1: [fluidkey-stealth-account-kit](../tooling/fluidkey-stealth-account-kit.md)
