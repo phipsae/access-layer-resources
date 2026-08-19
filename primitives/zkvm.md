@@ -6,7 +6,7 @@ guarantees: [O-3, X-2]
 
 related:
   requires: []
-  composes_with: [light-clients]
+  composes_with: [light-clients, validity-proofs]
   alternative_to: []
   see_also: []
 ---

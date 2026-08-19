@@ -22,7 +22,7 @@ Rollups execute transactions off Ethereum L1 and settle back to it. The domain h
 - **Property**: A user can get a transaction included and executed without the sequencer's cooperation, within a bounded delay, at a cost that keeps the right practical.
 - **Functions**: [Sequencing]
 - **Motivation**: The top rollups by value all run a single sequencer today. Where the proof system is live it cannot steal, but it can refuse and reorder, and a refused transaction is a frozen account for as long as the refusal lasts; with a liquidation pending, the delay is the loss.
-- **Primitives**: `based-sequencing`; `decentralized-sequencing`; [encrypted-mempools](../primitives/encrypted-mempools.md), which blind content-based filtering; L1 force-inclusion queues are protocol design, prose only.
+- **Primitives**: [based-sequencing](../primitives/based-sequencing.md); [decentralized-sequencing](../primitives/decentralized-sequencing.md); [encrypted-mempools](../primitives/encrypted-mempools.md), which blind content-based filtering; L1 force-inclusion queues are protocol design, prose only.
 - **Upgrade path**: Force-inclusion queues exist on most major rollups, with delay windows from half a day to a day, and at least one major rollup ships none at all; the cost and timing limits of the forced path are the differentiator. Based sequencing inherits L1's inclusion properties for hard inclusion, with preconfirmations reintroducing a weaker trust assumption for fast UX. Decentralized sequencer sets remove the single operator, and the first permissionless set is live.
 
 ### R-2: Exit without the operator [CR, S]
@@ -38,7 +38,7 @@ Rollups execute transactions off Ethereum L1 and settle back to it. The domain h
 - **Property**: No operator's word defines who owns what: state transitions are enforced by a live proof system (validity or fraud proofs) that is permissionless to operate.
 - **Functions**: [Execution and proving]
 - **Motivation**: Without a functional proof system, whoever posts state roots decides every balance, and the chain is a multisig with a website. R-1 and R-2 then become promises against that same word.
-- **Primitives**: `validity-proofs`; `fraud-proofs`.
+- **Primitives**: [validity-proofs](../primitives/validity-proofs.md); [fraud-proofs](../primitives/fraud-proofs.md).
 - **Upgrade path**: A functional proof system is the Stage 1 gate; permissionless challenge submission is the Stage 2 gate for fraud-proof systems, and validity rollups clear it through forced exits. The large optimistic rollups have opened proving permissionlessly; the major validity rollups still run centralized provers, and that is the trust that remains.
 
 ### R-4: Data availability for permissionless reconstruction [CR, S]
@@ -46,7 +46,7 @@ Rollups execute transactions off Ethereum L1 and settle back to it. The domain h
 - **Property**: Everything needed to reconstruct state and exercise an exit is published on L1, or on a DA layer whose weaker guarantees the rollup states plainly.
 - **Functions**: [Data availability]
 - **Motivation**: Proofs and escape hatches are theater if the data to use them is withheld. Data availability is what turns R-1 through R-3 from rights on paper into rights a user can exercise alone.
-- **Primitives**: `data-availability-sampling`.
+- **Primitives**: [data-availability-sampling](../primitives/data-availability-sampling.md).
 - **Upgrade path**: Publishing to L1 blobs is the default that keeps reconstruction permissionless. Data-availability sampling, live on L1 since late 2025, keeps raising how much it can carry. External DA committees trade reconstruction away for cost, and that tradeoff belongs in the open.
 
 ### R-5: Private execution as a rollup-level option [P]
@@ -54,7 +54,7 @@ Rollups execute transactions off Ethereum L1 and settle back to it. The domain h
 - **Property**: A rollup can make execution and state private by default (client-side proving, encrypted or committed state) while still settling to and exiting through Ethereum; where it does, R-2 through R-4 hold for the private state too.
 - **Functions**: [Execution and proving, Data availability]
 - **Motivation**: Privacy retrofitted app by app inherits each app's anonymity-set problem. A rollup that is private by default gives every application on it the same cover, and settlement on Ethereum keeps the exit and validity guarantees that privacy usually costs.
-- **Primitives**: `private-rollups`.
+- **Primitives**: [private-rollups](../primitives/private-rollups.md).
 - **Upgrade path**: One natively private rollup is live on mainnet, in alpha, at Stage 2 with a permissionless sequencer set. The open questions are client-side proving cost and how private state interacts with forced exits.
 
 ## Ship it
