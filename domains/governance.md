@@ -22,7 +22,7 @@ Governance applications run collective decisions: proposals, voting, delegation,
 - **Property**: How a member voted is not visible to other voters, observers, or would-be buyers, during or after the vote, and the voter cannot prove their choice to a third party even when they want to, given an honest tallying coordinator and an uncoerced initial key registration. The tally stays public and provable; that a member voted remains visible.
 - **Functions**: [Voting]
 - **Motivation**: A public ballot prices retaliation and rewards purchase: an employer, a whale, or a buyer can check compliance vote by vote, and the checking is what makes the pressure work. Receipt-freeness removes the market for votes by making delivery unverifiable.
-- **Primitives**: `private-voting` for receipt-free encrypted ballots with provable tallies.
+- **Primitives**: [private-voting](../primitives/private-voting.md) for receipt-free encrypted ballots with provable tallies.
 - **Upgrade path**: Receipt-free encrypted voting with public provable tallies ran in production for public-goods funding from 2020 to 2023 and is entering DAO stacks as governance plugins. The residual trust is the coordinator, who sees how each member voted and can stall the count, but cannot censor messages or forge the tally. Threshold-FHE designs, at the pilot stage, replace that coordinator with a committee of ciphernodes: no single party can decrypt an individual ballot, and validity of encrypted votes is proven at submission.
 
 ### G-2: Permissionless proposals [CR]
@@ -38,7 +38,7 @@ Governance applications run collective decisions: proposals, voting, delegation,
 - **Property**: No operator can exclude a valid vote from the tally or stall the count, and anyone can verify the tally from public data.
 - **Functions**: [Voting, Tallying and execution]
 - **Motivation**: An off-chain tally under one operator is the election authority problem imported on chain: the operator can silently refuse votes at intake or go down at the decisive hour, and while the accepted record is publicly recountable, its completeness is not provable.
-- **Primitives**: None carded for on-chain recording, which is protocol design; `private-voting` carries provable tallies where ballots are encrypted.
+- **Primitives**: None carded for on-chain recording, which is protocol design; [private-voting](../primitives/private-voting.md) carries provable tallies where ballots are encrypted.
 - **Upgrade path**: On-chain voting gives inclusion and recount by default. Off-chain schemes need published inputs and verifiable tallies to approach it, and the wallet-level broadcast path (W-4) is the floor under both.
 
 ### G-4: Votes bind execution [S]

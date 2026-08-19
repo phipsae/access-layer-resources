@@ -6,7 +6,7 @@ guarantees: [I-1, I-3, I-5]
 
 related:
   requires: []
-  composes_with: [oprf]
+  composes_with: [oprf, tls-oracles]
   alternative_to: []
   see_also: [zk-group-membership]
 ---
