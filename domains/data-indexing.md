@@ -29,7 +29,7 @@ Indexing applications serve the chain's read side: explorers, indexers, query AP
 - **Property**: A consumer can verify every answer: raw state against light-client verified roots, derived data against proofs that the stated transform ran over the full canonical input range, with the inputs bound to light-client verified headers. Execution proofs alone do not rule out omitted inputs; completeness is part of the claim being proven.
 - **Functions**: [Serving chain reads, Indexing and derived data]
 - **Motivation**: An indexer's answer is taken on faith by default, and the faith is misplaceable in both directions: a wrong balance ships goods, a wrong history convicts an address. The chain is verifiable; reads of it should not launder that away.
-- **Primitives**: `light-clients`; `zkvm` for proven derived queries.
+- **Primitives**: [light-clients](../primitives/light-clients.md); [zkvm](../primitives/zkvm.md) for proven derived queries.
 - **Upgrade path**: Inclusion and state proofs on responses are the floor. Light clients verify them locally. zkVM-proven derived data is emerging, on the same trajectory the oracle page tracks for aggregation.
 
 ### X-3: Reproducible datasets [CR, O]

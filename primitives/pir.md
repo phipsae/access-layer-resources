@@ -6,7 +6,7 @@ guarantees: [W-1, W-3]
 
 related:
   requires: []
-  composes_with: [mixnets, stealth-addresses]
+  composes_with: [mixnets, stealth-addresses, light-clients]
   alternative_to: []
   see_also: []
 ---

@@ -46,7 +46,7 @@ A wallet is the user's interface to Ethereum. It holds keys, builds and signs tr
 - **Property**: Every wallet function that routes through an intermediary (hosted RPC, relayer, bundler, paymaster) keeps an intermediary-free path that stays credible and accessible.
 - **Functions**: [Network access, Transaction broadcast]
 - **Motivation**: A convenience path turns into a chokepoint the day its operator starts filtering, and users locked to it at that point have no exit. The intermediary-free path has to exist and stay usable earlier, while nobody needs it yet.
-- **Primitives**: `light-clients`; `native-account-abstraction` (proposal stage) would remove relayer dependence; self-hosted nodes and direct p2p broadcast are infrastructure practices, no card.
+- **Primitives**: [light-clients](../primitives/light-clients.md); `native-account-abstraction` (proposal stage) would remove relayer dependence; self-hosted nodes and direct p2p broadcast are infrastructure practices, no card.
 - **Upgrade path**: Self-hosted nodes and light clients give network access its zero option, and direct broadcast paths exist. Permissionless alternatives to bundlers (and to paymasters, where gas is sponsored) are still early.
 
 ### W-5: User-controlled safety features [S, O]

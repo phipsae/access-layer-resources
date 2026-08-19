@@ -45,7 +45,7 @@ Payment applications move value between people and businesses: transfers, invoic
 - **Property**: The payee can confirm a payment is final using public chain data alone, without trusting a payment API, an explorer, or the payer's word.
 - **Functions**: [Settlement confirmation]
 - **Motivation**: A merchant who learns "you were paid" from a hosted API has re-created the acquiring bank: the API can lie, go down, or be compelled, and the merchant ships goods against its word. Finality is on chain; reading it should not require permission.
-- **Primitives**: `light-clients`.
+- **Primitives**: [light-clients](../primitives/light-clients.md).
 - **Upgrade path**: Light clients embedded in merchant tooling verify inclusion and finality locally. Finality lags around fifteen minutes, so point-of-sale flows either wait or accept inclusion with bounded risk; invoicing and settlement absorb the delay without noticing. Until integrated, cross-checking independent RPC endpoints is the weak-form fallback.
 
 ## Ship it
