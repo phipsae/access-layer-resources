@@ -46,7 +46,7 @@ An open knowledge base that takes an application builder from their domain (wall
   - [x] `data-indexing`
   - [x] `rollup`
   - [x] `governance`
-- [ ] Fill functions and guarantees per domain:
+- [x] Fill functions and guarantees per domain:
   - [x] `defi`
   - [x] `payments`
   - [x] `identity`
@@ -55,11 +55,9 @@ An open knowledge base that takes an application builder from their domain (wall
   - [x] `rollup`
   - [x] `governance`
 - [x] Contribution guidelines (`CONTRIBUTING.md`): how to add a card, guarantee-ID rules, voice and formatting rules, review flow.
-- [ ] Primitive backlog: `verifiable-randomness` (O-3; inclusion uncertain per Yanis 2026-08-19, and the dominant oracle-style implementation needs a licensing check before it can be named: BUSL components are source-available, intolerable per the mandate; drand is the cleanly licensed beacon). Resolved without cards (2026-08-19): `content-addressed-hosting` (too implementation-specific to map; prose in defi D-3), `omr` (folded into pir as a mention), `blob-bulletin-boards` (a concept, not yet a tool; SocialBlobs and ERC-8179/8180 references kept for a future revisit). Done: `light-clients`, `zkvm`, `shielded-pools`, `encrypted-mempools`, `anonymous-credentials`, `zk-group-membership`, `oprf`, `based-sequencing`, `decentralized-sequencing`, `validity-proofs`, `fraud-proofs`, `data-availability-sampling`, `private-rollups`, `tls-oracles`, `private-voting`, `native-account-abstraction`, `transaction-simulation` (2026-08-19).
-- [ ] Wallet guarantee candidates, parked: key custody and recovery (open question: one merged key-access-lifecycle guarantee or two). Private transfers RESOLVED 2026-08-18: landed as payments P-1 with the required layered-on-transparent-L1 framing.
-- [ ] Messaging domain, parked pending a sharper builder audience; revisit with XMTP, Status (Waku), and Push Protocol as the concrete apps.
+- [x] Primitive backlog: complete 2026-08-19. 19 cards shipped: `light-clients`, `zkvm`, `shielded-pools`, `encrypted-mempools`, `anonymous-credentials`, `zk-group-membership`, `oprf`, `based-sequencing`, `decentralized-sequencing`, `validity-proofs`, `fraud-proofs`, `data-availability-sampling`, `private-rollups`, `tls-oracles`, `private-voting`, `native-account-abstraction`, `transaction-simulation`, plus the earlier `stealth-addresses`, `pir`, `mixnets`. Resolved without cards: `content-addressed-hosting` (prose in defi D-3), `omr` (mention in pir), `blob-bulletin-boards` (a concept, not yet a tool; SocialBlobs and ERC-8179/8180 references kept). One slug parked (see Parked).
 
-### Milestone 3: publication
+### Milestone 3: publication (closed 2026-08-19; Vale deferred)
 
 - [x] Markdown lint: markdownlint config and CI job.
 - [ ] Prose lint: Vale styles for glossary terminology consistency and marketing-language bans. Deferred 2026-08-18: minimal stack chosen; revisit if outside contributions grow.
@@ -68,9 +66,29 @@ An open knowledge base that takes an application builder from their domain (wall
 - [x] License: CC0 1.0.
 - [x] GitHub org and go-public: pushed 2026-08-17 to `ethereum/app-enablement-resources`.
 
+### Milestone 4: integration guides
+
+Tooling cards, harvested from the domains' Ship it sections. Cards land when the integration path is real per the tooling scope; the gates below keep announcements from counting as availability.
+
+- [x] anon-rpc (W-1, X-1): done, the format proof.
+- [ ] kohaku: the wallet SDK surface (W-5 safety controls; D-2 and P-1 shielded-pool plugins; Railgun plugin operational, Privacy Pools in development).
+- [ ] Light-client integration: Helios and Colibri via the Kohaku provider layer (W-4, P-4, X-2).
+- [ ] Stealth payments: fluidkey-stealth-account-kit (W-2, P-1).
+- [ ] Anonymous membership: Semaphore (I-4, I-5).
+- [ ] Web proofs: Reclaim and TLSNotary (O-3, O-4).
+- [ ] Encrypted-mempool access: Shutter opt-in RPC (D-1; Gnosis today, Ethereum PBS path).
+- [ ] Private voting: the MACI Aragon plugin (G-1, G-3; gate: past demo stage).
+- [ ] PIR endpoint tooling (W-1, X-1; gate: PIR Genesis, targeted Q4 2026).
+
+### Parked
+
+- Wallet guarantee candidates: key custody and recovery (open question: one merged key-access-lifecycle guarantee or two). Private transfers RESOLVED 2026-08-18: landed as payments P-1 with the required layered-on-transparent-L1 framing.
+- Messaging domain, pending a sharper builder audience; revisit with XMTP, Status (Waku), and Push Protocol as the concrete apps.
+- `verifiable-randomness` primitive card (O-3): inclusion uncertain per Yanis 2026-08-19, and the dominant oracle-style implementation needs a licensing check before it can be named (BUSL components are source-available, intolerable per the mandate); drand is the cleanly licensed beacon.
+
 ## Open questions
 
 - ~~Domain taxonomy~~ (resolved 2026-08-17): eight app-vertical domains (wallet, defi, payments, identity, oracle, data-indexing, rollup, governance); messaging parked; bridges and naming folded into rollup and identity.
 - ~~Tooling scope~~ (resolved 2026-08-17): open source software an application can integrate (libraries, SDKs, reference implementations, self-hostable services); end-user apps only via their integrable parts; paid hosted plans acceptable when the documented integration path is fully open source and self-hostable.
 - Specs scope: phase 1 likely references external specs only (permalinks pinned to commit or tag); specifying solutions here would be a phase 2 decision.
-- Full primitive list beyond the initial three.
+- ~~Full primitive list beyond the initial three~~ (resolved 2026-08-19): 19 primitive cards shipped; additions now flow from guarantee needs rather than a list.
