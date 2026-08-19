@@ -46,7 +46,7 @@ A wallet is the user's interface to Ethereum. It holds keys, builds and signs tr
 - **Property**: Every wallet function that routes through an intermediary (hosted RPC, relayer, bundler, paymaster) keeps an intermediary-free path that stays credible and accessible.
 - **Functions**: [Network access, Transaction broadcast]
 - **Motivation**: A convenience path turns into a chokepoint the day its operator starts filtering, and users locked to it at that point have no exit. The intermediary-free path has to exist and stay usable earlier, while nobody needs it yet.
-- **Primitives**: [light-clients](../primitives/light-clients.md); `native-account-abstraction` (proposal stage) would remove relayer dependence; self-hosted nodes and direct p2p broadcast are infrastructure practices, no card.
+- **Primitives**: [light-clients](../primitives/light-clients.md); [native-account-abstraction](../primitives/native-account-abstraction.md) (proposal stage) would remove relayer dependence; self-hosted nodes and direct p2p broadcast are infrastructure practices, no card.
 - **Upgrade path**: Self-hosted nodes and light clients give network access its zero option, and direct broadcast paths exist. Permissionless alternatives to bundlers (and to paymasters, where gas is sponsored) are still early.
 
 ### W-5: User-controlled safety features [S, O]
@@ -54,7 +54,7 @@ A wallet is the user's interface to Ethereum. It holds keys, builds and signs tr
 - **Property**: Filters, warnings, simulations, and any AI assistance run under the user's control: rules are inspectable, decisions can be overridden, and nothing reports home by default.
 - **Functions**: [Discovery and safety features]
 - **Motivation**: Safety tooling the user can neither inspect nor override decides on their behalf what they may sign. A wallet that silently blocks a contract has made a custody decision, whatever the intent behind it.
-- **Primitives**: `transaction-simulation` run locally; locally verifiable filters and community-maintained lists with override paths (no card yet).
+- **Primitives**: [transaction-simulation](../primitives/transaction-simulation.md) run locally; locally verifiable filters and community-maintained lists with override paths (no card yet).
 - **Upgrade path**: Local transaction simulation is available today; risk-based transaction controls under user control are part of Kohaku's stated scope.
 
 ## Ship it

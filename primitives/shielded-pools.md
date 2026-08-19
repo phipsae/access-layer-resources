@@ -31,7 +31,7 @@ D-2: positions, balances, and history leave the public ledger while funds stay i
 
 ## Trust model
 
-The core needs no operator: circuit soundness is the cryptographic base, and the systems deployed today all run Groth16 with circuit-specific ceremonies, so a live trusted setup is part of it. Relayers that pay withdrawal gas see timing and destinations, and can refuse service. Association-set designs add a screening party that gates inflows; its exclusions are a policy decision, and a lawful user it excludes bears the cost.
+The core needs no operator: circuit soundness is the cryptographic base, and the systems deployed today all run Groth16 with circuit-specific ceremonies, so a live trusted setup is part of it. Relayers that pay withdrawal gas see timing and destinations, and can refuse service; the draft frame-transaction EIPs (recent-root validation, keyed nonces) would let spends enter the public mempool without them. Association-set designs add a screening party that gates inflows; its exclusions are a policy decision, and a lawful user it excludes bears the cost.
 
 ## Known limits
 

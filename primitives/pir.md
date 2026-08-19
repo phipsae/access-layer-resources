@@ -17,7 +17,7 @@ related:
 
 Private information retrieval lets a client fetch a record from a server's database without the server learning which record was fetched. The server computes an answer over data it holds, against a query that reveals nothing about the index. Two families exist: single-server schemes, where privacy rests on a cryptographic hardness assumption (today usually lattice-based), and multi-server schemes, where privacy is unconditional as long as the servers do not collude.
 
-Every remote Ethereum read (a balance, a nonce, a log filter) tells the endpoint which addresses and contracts the user cares about. PIR removes that channel: the endpoint serves chain data while learning nothing about which part of it was requested.
+Every remote Ethereum read (a balance, a nonce, a log filter) tells the endpoint which addresses and contracts the user cares about. PIR removes that channel: the endpoint serves chain data while learning nothing about which part of it was requested. A sibling primitive, oblivious message retrieval, applies the same goal to detection: a server finds the messages addressed to you without learning which ones.
 
 ## What it guarantees
 
@@ -54,3 +54,4 @@ Open source libraries: [FrodoPIR](https://github.com/brave-experiments/frodo-pir
 - [EF Private Reads roadmap](https://reads.ethereum.foundation/roadmap/)
 - [Sharded PIR design for the Ethereum state](https://notes.ethereum.org/U9xM4VOPR9isPK7lOZJUQg) (draft)
 - [Ethereum privacy: private information retrieval](https://hackmd.io/@brech1/ethereum-privacy-pir)
+- [Oblivious message retrieval](https://eprint.iacr.org/2021/1256), Liu and Tromer, 2021

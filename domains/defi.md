@@ -38,7 +38,7 @@ DeFi applications let users trade, lend, borrow, and provide liquidity through s
 - **Property**: Every action the hosted frontend offers stays possible without it: contract interfaces are documented, the frontend builds and mirrors from source, and no exit depends on an operator-run keeper or backend.
 - **Functions**: [Frontend distribution, Lending and borrowing, Investing and liquidity provision]
 - **Motivation**: The frontend is where DeFi gets censored in practice. Hosted interfaces have been geo-blocked and delisted while their contracts kept running, and users who only knew the frontend were locked out of their own positions.
-- **Primitives**: `content-addressed-hosting`; direct contract interaction and community mirrors are practices, no card.
+- **Primitives**: None carded; content-addressed hosting, direct contract interaction, and community mirrors are practices.
 - **Upgrade path**: Verified source and documented ABIs set the floor. Content-addressed frontends make mirrors cheap and tamper-evident. The exit path earns the same testing as the happy path, while nobody needs it yet.
 
 ### D-4: No hidden admin switches [S, O]

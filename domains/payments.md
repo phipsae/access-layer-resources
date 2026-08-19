@@ -37,7 +37,7 @@ Payment applications move value between people and businesses: transfers, invoic
 - **Property**: Any standing authority to pull funds is scoped to an amount, a period, and an expiry, and the user can revoke it at any time without the payee's cooperation.
 - **Functions**: [Recurring payments and subscriptions]
 - **Motivation**: Approval-based pull payments are the default subscription mechanism today, and the approvals are routinely unlimited: a blank check on that token, where one compromised or malicious payee contract drains its full balance. A subscription built on a blank check turns a billing relationship into a custody grant.
-- **Primitives**: `native-account-abstraction`; session keys and scoped permissions through account abstraction.
+- **Primitives**: [native-account-abstraction](../primitives/native-account-abstraction.md); session keys and scoped permissions through account abstraction.
 - **Upgrade path**: EIP-7702, live since 2025, lets an ordinary account delegate to smart-account code that enforces scoped session keys: per-contract, capped, expiring. Wallet permission-request standards are draft but shipping in several wallets. Until integrated, per-payee capped approvals are the floor.
 
 ### P-4: Independently verifiable settlement [S, CR]
