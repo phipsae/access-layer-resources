@@ -85,6 +85,7 @@ Tooling cards, harvested from the domains' Ship it sections; the [ethereum.org d
 - Wallet guarantee candidates: key custody and recovery (open question: one merged key-access-lifecycle guarantee or two). Private transfers RESOLVED 2026-08-18: landed as payments P-1 with the required layered-on-transparent-L1 framing.
 - Messaging domain, pending a sharper builder audience; revisit with XMTP, Status (Waku), and Push Protocol as the concrete apps.
 - `verifiable-randomness` primitive card (O-3): inclusion uncertain per Yanis 2026-08-19, and the dominant oracle-style implementation needs a licensing check before it can be named (BUSL components are source-available, intolerable per the mandate); drand is the cleanly licensed beacon.
+- BAL-based light-client spec: parked as a phase-2 authoring decision (2026-08-26). Gates: a proof-carrying successor to EIP-7928 post-values (the published diffs carry no proofs; correctness rests on executing validators rejecting false lists), stable JSON-RPC exposure of BALs, and observed client behavior after Glamsterdam activation. Design-space analysis lives in the workspace, outside this repository.
 
 ## Open questions
 

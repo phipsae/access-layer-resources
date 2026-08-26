@@ -1,6 +1,6 @@
 ---
 name: shielded-pools
-last_reviewed: 2026-08-19
+last_reviewed: 2026-08-26
 maturity: production
 guarantees: [D-2, P-1]
 

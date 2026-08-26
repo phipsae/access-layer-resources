@@ -1,6 +1,6 @@
 ---
 name: pir
-last_reviewed: 2026-08-17
+last_reviewed: 2026-08-26
 maturity: usable
 guarantees: [W-1, W-3]
 
@@ -40,7 +40,7 @@ Single-server query privacy needs no honesty from the operator; it holds under t
 ## Known limits
 
 - Server cost scales with the database: a stateless query touches the whole encoded shard, and hint-based schemes buy sublinear online work with a one-time client download and storage. Serving Ethereum-scale state takes sharding and heavy hardware; GPU benchmarks answer in tens of milliseconds over multi-gigabyte shards, at a few hundred kilobytes per query.
-- Mutable state is the hard case: the encoding must be refreshed as the chain changes, which is expensive for hot state.
+- Mutable state is the hard case: the encoding must be refreshed as the chain changes, which is expensive for hot state. Block-level access lists ([EIP-7928](https://eips.ethereum.org/EIPS/eip-7928), Glamsterdam) commit each header to a per-block diff of changed state, which supplies the refresh input; the refresh cost itself remains.
 - A PIR query costs the operator far more than a plain RPC read, and who pays for that is unresolved.
 - No sustained production deployment serves Ethereum reads yet; the EF Private Reads program targets a first end-to-end deployment over live state in Q4 2026.
 - Post-quantum exposure is low. Lattice-based schemes rest on assumptions believed to withstand quantum attack, and multi-server schemes are information-theoretic, so even recorded queries stay private.

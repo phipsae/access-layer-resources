@@ -1,6 +1,6 @@
 ---
 name: light-clients
-last_reviewed: 2026-08-19
+last_reviewed: 2026-08-26
 maturity: usable
 guarantees: [W-4, P-4, X-2]
 
@@ -18,6 +18,8 @@ related:
 A light client verifies chain data against Ethereum's consensus commitments with the resources a phone or browser has, instead of trusting whatever an RPC endpoint answers. Since the Altair upgrade, a rotating sync committee of 512 validators signs block headers, so a client can follow the chain by checking one aggregate signature per update it accepts, at minimum one per committee period of about 27 hours, rather than re-executing blocks.
 
 Two styles work today: header-following clients that stay synced and verify responses as they come, and proof-driven stateless clients that keep no state and verify consensus plus execution proofs on demand, per query.
+
+The Glamsterdam fork changes what a header carries and leaves the sync protocol untouched. Under [EIP-7732](https://eips.ethereum.org/EIPS/eip-7732), a verified header commits to a builder's payload bid, revealed mid-slot: confirming execution takes payload status alongside the header, and execution-state proofs for a slot derive only after the reveal. [EIP-7928](https://eips.ethereum.org/EIPS/eip-7928) commits each header to a per-block diff of every state access. A node that applies those diffs without executing tracks state at low cost and verifies nothing locally; it rests on executing validators rejecting blocks whose lists lie, an economic basis outside this card's guarantee.
 
 ## What it guarantees
 
