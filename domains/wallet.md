@@ -1,6 +1,6 @@
 ---
 name: wallet
-last_reviewed: 2026-08-17
+last_reviewed: 2026-08-27
 ---
 
 # Wallet
@@ -22,8 +22,8 @@ A wallet is the user's interface to Ethereum. It holds keys, builds and signs tr
 - **Property**: Network access does not reveal, to any single operator or observer, which addresses a user queries or controls, and does not tie those addresses to the user's IP address.
 - **Functions**: [Network access]
 - **Motivation**: A hosted RPC endpoint sees every balance check and every pending transaction, together with the IP they came from. Whoever runs it can build a financial profile of the user, sell it, or be forced to log it for someone else.
-- **Primitives**: [pir](../primitives/pir.md) for chain queries, [mixnets](../primitives/mixnets.md) for network-level cover.
-- **Upgrade path**: Light clients (Helios, Colibri, both packaged in the Kohaku provider layer) verify chain data locally, which removes trust in the endpoint's answers; the endpoint still sees which addresses are queried. PIR for chain queries, which would close that leak, is at the pilot stage: the EF Private Reads program targets a first deployment over live state in Q4 2026.
+- **Primitives**: [pir](../primitives/pir.md) for chain queries, [mixnets](../primitives/mixnets.md) for network-level cover, [trusted-execution-environments](../primitives/trusted-execution-environments.md) for the same query-content leak under a hardware trust model.
+- **Upgrade path**: Light clients (Helios, Colibri, both packaged in the Kohaku provider layer) verify chain data locally, which removes trust in the endpoint's answers; the endpoint still sees which addresses are queried. TEE-attested relays close that leak today under a hardware trust model and serve production traffic. PIR, which closes it cryptographically, is at the pilot stage: the EF Private Reads program targets a first deployment over live state in Q4 2026.
 
 ### W-2: Address-to-address unlinkability [P]
 
@@ -56,6 +56,14 @@ A wallet is the user's interface to Ethereum. It holds keys, builds and signs tr
 - **Motivation**: Safety tooling the user can neither inspect nor override decides on their behalf what they may sign. A wallet that silently blocks a contract has made a custody decision, whatever the intent behind it.
 - **Primitives**: [transaction-simulation](../primitives/transaction-simulation.md) run locally; locally verifiable filters and community-maintained lists with override paths (no card yet).
 - **Upgrade path**: Local transaction simulation is available today; risk-based transaction controls under user control are part of Kohaku's stated scope.
+
+### W-6: Key lifecycle without custody or linkage [S, CR, P]
+
+- **Property**: Losing a key or device does not lose the account; recovering or rotating keys requires no single custodian and does not link the user's addresses or identities to each other.
+- **Functions**: [Key management]
+- **Motivation**: A seed phrase makes key loss unrecoverable and turns its backup into the weakest link, so users park funds with custodians to escape it, reinstating the intermediary the wallet exists to remove. Recovery and rotation that publish linkage undo address separation at the moment the user is most exposed.
+- **Primitives**: [social-recovery](../primitives/social-recovery.md); keystore designs that rotate keys across contexts without publishing linkage (proposal stage, no card).
+- **Upgrade path**: Guardian-based recovery has run on mainnet since 2020 and ships as modules for the dominant smart-account stacks; guardian-hiding variants that keep the guardian set private until recovery are early. Key rotation as a lifecycle practice, post-quantum migration included, follows smart-account adoption.
 
 ## Ship it
 

@@ -1,6 +1,6 @@
 ---
 name: encrypted-mempools
-last_reviewed: 2026-08-19
+last_reviewed: 2026-08-27
 maturity: usable
 guarantees: [D-1, R-1]
 
@@ -8,7 +8,7 @@ related:
   requires: []
   composes_with: [mixnets]
   alternative_to: []
-  see_also: []
+  see_also: [trusted-execution-environments]
 ---
 
 # Encrypted mempools

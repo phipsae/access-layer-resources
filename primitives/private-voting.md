@@ -1,6 +1,6 @@
 ---
 name: private-voting
-last_reviewed: 2026-08-19
+last_reviewed: 2026-08-27
 maturity: usable
 guarantees: [G-1, G-3]
 
@@ -8,7 +8,7 @@ related:
   requires: []
   composes_with: [zk-group-membership]
   alternative_to: []
-  see_also: []
+  see_also: [trusted-execution-environments]
 ---
 
 # Private voting

@@ -1,6 +1,6 @@
 ---
 name: data-indexing
-last_reviewed: 2026-08-17
+last_reviewed: 2026-08-27
 ---
 
 # Data indexing
@@ -21,8 +21,8 @@ Indexing applications serve the chain's read side: explorers, indexers, query AP
 - **Property**: Serving a query teaches the service nothing about which addresses, contracts, or topics the user watches, and nothing ties the query stream to the user's IP.
 - **Functions**: [Serving chain reads, Search and discovery]
 - **Motivation**: The read side sees the questions, and the questions are the profile: which addresses a user checks daily says more than what the chain records about them. A query log is surveillance the user cannot see happening.
-- **Primitives**: [pir](../primitives/pir.md); [mixnets](../primitives/mixnets.md) for the transport half.
-- **Upgrade path**: Transport-level cover (mixnets, anonymized RPC) hides who is asking today. PIR closes what is asked, with the first end-to-end deployment over live state targeted for Q4 2026. Serving PIR is a cost decision the operator makes, which is the adoption problem this repository exists to work on.
+- **Primitives**: [pir](../primitives/pir.md); [mixnets](../primitives/mixnets.md) for the transport half; [trusted-execution-environments](../primitives/trusted-execution-environments.md) for the content half under a hardware trust model.
+- **Upgrade path**: Transport-level cover (mixnets, anonymized RPC) hides who is asking today, and TEE-attested relays hide what is asked under a hardware trust model. PIR closes what is asked cryptographically, with the first end-to-end deployment over live state targeted for Q4 2026. Serving PIR is a cost decision the operator makes, which is the adoption problem this repository exists to work on.
 
 ### X-2: Verifiable answers [S]
 

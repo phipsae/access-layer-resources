@@ -55,7 +55,7 @@ An open knowledge base that takes an application builder from their domain (wall
   - [x] `rollup`
   - [x] `governance`
 - [x] Contribution guidelines (`CONTRIBUTING.md`): how to add a card, guarantee-ID rules, voice and formatting rules, review flow.
-- [x] Primitive backlog: complete 2026-08-19. 19 cards shipped: `light-clients`, `zkvm`, `shielded-pools`, `encrypted-mempools`, `anonymous-credentials`, `zk-group-membership`, `oprf`, `based-sequencing`, `decentralized-sequencing`, `validity-proofs`, `fraud-proofs`, `data-availability-sampling`, `private-rollups`, `tls-oracles`, `private-voting`, `native-account-abstraction`, `transaction-simulation`, plus the earlier `stealth-addresses`, `pir`, `mixnets`. Resolved without cards: `content-addressed-hosting` (prose in defi D-3), `omr` (mention in pir), `blob-bulletin-boards` (a concept, not yet a tool; SocialBlobs and ERC-8179/8180 references kept). One slug parked (see Parked).
+- [x] Primitive backlog: complete 2026-08-19. 19 cards shipped: `light-clients`, `zkvm`, `shielded-pools`, `encrypted-mempools`, `anonymous-credentials`, `zk-group-membership`, `oprf`, `based-sequencing`, `decentralized-sequencing`, `validity-proofs`, `fraud-proofs`, `data-availability-sampling`, `private-rollups`, `tls-oracles`, `private-voting`, `native-account-abstraction`, `transaction-simulation`, plus the earlier `stealth-addresses`, `pir`, `mixnets`. Resolved without cards: `content-addressed-hosting` (prose in defi D-3), `omr` (mention in pir), `blob-bulletin-boards` (a concept, not yet a tool; SocialBlobs and ERC-8179/8180 references kept). One slug parked (see Parked). Additions from the 2026-08-27 roadmap gap analysis (community privacy roadmaps checked against the card set): `trusted-execution-environments` (W-1, X-1), `private-shared-state` (D-1, D-2; MPC/FHE/TEE/co-SNARK flavors kept inline in Trust model, the `variants` file split deferred until their tooling diverges), `social-recovery` (W-6).
 
 ### Milestone 3: publication (closed 2026-08-19; Vale deferred)
 
@@ -82,7 +82,7 @@ Tooling cards, harvested from the domains' Ship it sections; the [ethereum.org d
 
 ### Parked
 
-- Wallet guarantee candidates: key custody and recovery (open question: one merged key-access-lifecycle guarantee or two). Private transfers RESOLVED 2026-08-18: landed as payments P-1 with the required layered-on-transparent-L1 framing.
+- Wallet guarantee candidates: key custody and recovery RESOLVED 2026-08-27: landed as one merged guarantee, wallet W-6 (key lifecycle without custody or linkage), with `social-recovery` as its first primitive card. Private transfers RESOLVED 2026-08-18: landed as payments P-1 with the required layered-on-transparent-L1 framing.
 - Messaging domain, pending a sharper builder audience; revisit with XMTP, Status (Waku), and Push Protocol as the concrete apps.
 - `verifiable-randomness` primitive card (O-3): inclusion uncertain per Yanis 2026-08-19, and the dominant oracle-style implementation needs a licensing check before it can be named (BUSL components are source-available, intolerable per the mandate); drand is the cleanly licensed beacon.
 - BAL-based light-client spec: parked as a phase-2 authoring decision (2026-08-26). Gates: a proof-carrying successor to EIP-7928 post-values (the published diffs carry no proofs; correctness rests on executing validators rejecting false lists), stable JSON-RPC exposure of BALs, and observed client behavior after Glamsterdam activation. Design-space analysis lives in the workspace, outside this repository.
