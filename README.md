@@ -1,4 +1,4 @@
-# App Enablement Resources
+# Access Layer Resources
 
 An open knowledge base for building Ethereum applications with CROPS properties: Censorship Resistance, Open Source and Free, Privacy, and Security.
 
@@ -14,7 +14,6 @@ This repository describes, in first-principles terms, the guarantees a CROPS-ali
 1. [domains/](./domains/) is the entry point. Each page decomposes an application domain into its functions and states the desired properties of each function as identified guarantees (for example W-1: network access does not link a user's addresses to their IP).
 2. [primitives/](./primitives/) explains the building blocks behind each guarantee: what the primitive is, what it buys in CROPS terms, its trust model and maturity.
 3. [tooling/](./tooling/) lists implementations and integration guides, tagged with the guarantee IDs they satisfy; it selects from the broader curated index at [ethereum.org/developers/tools](https://ethereum.org/developers/tools/).
-4. [specs/](./specs/) holds reference cards for specifications (EIPs, ERCs, protocol specs), pinned to permalinks.
 
 Shared vocabulary is defined once in [GLOSSARY.md](./GLOSSARY.md).
 

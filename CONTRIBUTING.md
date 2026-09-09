@@ -1,6 +1,6 @@
 # Contributing
 
-This repository maps application domains to the CROPS guarantees they can offer users, the primitives behind those guarantees, and the tooling that ships them. [README.md](README.md) explains the structure; [PRD.md](PRD.md) tracks what is planned; [CLAUDE.md](CLAUDE.md) is the authoritative rule set that this guide summarizes.
+This repository maps application domains to the CROPS guarantees they can offer users, the primitives behind those guarantees, and the tooling that ships them. [README.md](README.md) explains the structure; [CLAUDE.md](CLAUDE.md) is the authoritative rule set that this guide summarizes.
 
 ## Ground rules
 
@@ -11,7 +11,7 @@ This repository maps application domains to the CROPS guarantees they can offer 
 
 ## Adding a guarantee to a domain page
 
-Guarantees live in `domains/` as `### <ID>: <short name> [<CROPS letters>]` headings; the heading is the declaration. Each block carries five fields: Property, Functions (bracketed list from the page's Functions section), Motivation, Primitives (links to cards, or bare slugs for planned ones tracked in PRD.md), and Upgrade path.
+Guarantees live in `domains/` as `### <ID>: <short name> [<CROPS letters>]` headings; the heading is the declaration. Each block carries five fields: Property, Functions (bracketed list from the page's Functions section), Motivation, Primitives (links to cards, or bare slugs for planned ones; the maintainers track planned cards outside the repository), and Upgrade path.
 
 IDs are permanent: never renumber, never reuse. Reserved letters: W wallet, D defi, P payments, I identity, O oracle, X data-indexing, R rollup, G governance.
 

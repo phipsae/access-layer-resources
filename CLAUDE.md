@@ -5,18 +5,18 @@ This repository doubles as LLM context. Every rule below exists to keep it relia
 ## Files
 
 - One concept per file. A file covers exactly one domain, primitive, tool, or spec.
-- The folder is the type: `domains/`, `primitives/`, `tooling/`, `specs/`. There is no `type` frontmatter field.
+- The folder is the type: `domains/`, `primitives/`, `tooling/`. There is no `type` frontmatter field.
 - New files start from their folder's `_template.md`.
 
 ## Frontmatter
 
-Shared fields (automated validation is planned; see [PRD.md](./PRD.md)):
+Shared fields:
 
 ```yaml
 ---
 name: <kebab-case-slug, matches filename>
 last_reviewed: YYYY-MM-DD
-guarantees: [W-1, W-3]   # IDs satisfied (primitives, tooling, specs; not domains)
+guarantees: [W-1, W-3]   # IDs satisfied (primitives and tooling; not domains)
 ---
 ```
 
@@ -30,9 +30,9 @@ Automated checks are markdownlint and lychee (configs at the repo root, run by `
 
 - Domains declare guarantees as `### <ID>:` headings; the heading is the declaration. IDs are one uppercase letter per domain plus a number. Reserved letters: W wallet, D defi, P payments, I identity, O oracle, X data-indexing, R rollup, G governance.
 - IDs are permanent. Never renumber. A withdrawn guarantee keeps its ID and is marked withdrawn.
-- Primitives, tooling, and specs reference guarantees by ID in frontmatter and prose. This is the only cross-reference mechanism; do not restate guarantee text in other files.
+- Primitives and tooling reference guarantees by ID in frontmatter and prose. This is the only cross-reference mechanism; do not restate guarantee text in other files.
 - Guarantee blocks are markdown with fixed `- **Field**:` bullets, never YAML frontmatter. Decision recorded 2026-08-17: markdown keeps the blocks readable, diffable, annotatable in review tools, and deep-linkable via heading anchors; the fixed field format keeps them machine-parseable.
-- In the Primitives field, mention primitives only as links to existing cards or as bare slugs in inline code. Every bare slug has a matching planned-card entry in [PRD.md](./PRD.md). A mention not worth a future card is not a primitive.
+- In the Primitives field, mention primitives only as links to existing cards or as bare slugs in inline code. Every bare slug is a planned card; the maintainers track the planned-card list outside the repository. A mention not worth a future card is not a primitive.
 - Guarantees carry no maturity rating. Maturity belongs to primitives and tooling (their frontmatter), one rating per path; a guarantee's achievability is narrated in its Upgrade path field and read off the linked cards.
 
 ## Cross-references
@@ -66,4 +66,4 @@ This repository describes; it never sells. Marketing tone destroys the credibili
 
 ## Before pushing
 
-Check manually until CI lands (see [PRD.md](./PRD.md)): frontmatter matches the template, guarantee IDs resolve to a domain heading, internal links resolve, terminology matches the glossary.
+Check manually (structural validation is a deliberate manual gate; see Frontmatter above): frontmatter matches the template, guarantee IDs resolve to a domain heading, internal links resolve, terminology matches the glossary.
