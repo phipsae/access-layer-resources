@@ -1,6 +1,6 @@
 ---
 name: private-voting
-last_reviewed: 2026-08-27
+last_reviewed: 2026-09-09
 maturity: usable
 guarantees: [G-1, G-3]
 
@@ -44,7 +44,7 @@ Coordinator-class: the coordinator sees individual votes and can stall the count
 
 ## Implementations
 
-[MACI](https://github.com/privacy-ethereum/maci) (PSE, coordinator model, powering clr.fund's funding rounds and an Aragon governance plugin at demo stage) and [Interfold](https://github.com/theinterfold/interfold) (formerly Enclave, threshold-FHE committee model, pilot). Tooling cards pending.
+[MACI](../tooling/maci.md) (PSE, coordinator model; powered clr.fund's funding rounds through 2023, archived in 2026) and [Interfold](../tooling/interfold.md) (formerly Enclave, threshold-FHE committee model, testnet).
 
 ## Further reading
 

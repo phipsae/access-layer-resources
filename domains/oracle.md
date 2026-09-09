@@ -38,7 +38,7 @@ Oracles bring off-chain facts on chain: prices, events, randomness. Everything d
 - **Property**: A consumer can verify where a value came from and how it was computed: signed source data, provable web sessions, or randomness whose proof verifies on chain. No black-box pipeline sits between source and contract.
 - **Functions**: [Data sourcing, Randomness]
 - **Motivation**: A feed that says "trust our aggregation" is a privileged specification: the one part of an on-chain application whose correctness nobody outside can check.
-- **Primitives**: [tls-oracles](../primitives/tls-oracles.md) for source data provable without the source's cooperation; `verifiable-randomness` for draws whose proof verifies on chain; [zkvm](../primitives/zkvm.md) for proving the aggregation itself.
+- **Primitives**: [tls-oracles](../primitives/tls-oracles.md) for source data provable without the source's cooperation; [verifiable-randomness](../primitives/verifiable-randomness.md) for draws whose proof verifies on chain; [zkvm](../primitives/zkvm.md) for proving the aggregation itself.
 - **Upgrade path**: Verifiable randomness is production-standard, with withholding as the residual bias vector. Web proofs are in production for user-facing attestation and entering reporter pipelines; signed exchange data covers the price path where exchanges cooperate. zkVM pipelines that prove the aggregation itself are emerging, with zk-verified aggregation live in early deployments; there, the reported value becomes verifiably the stated function of its signed inputs.
 
 ### O-4: Private user-data attestation [P]
