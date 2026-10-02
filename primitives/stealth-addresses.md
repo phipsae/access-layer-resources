@@ -1,6 +1,6 @@
 ---
 name: stealth-addresses
-last_reviewed: 2026-08-17
+last_reviewed: 2026-10-02
 maturity: production
 guarantees: [W-2]
 
@@ -42,14 +42,17 @@ The core scheme has no intermediary. The registry and announcer are permissionle
 - Scanning costs fall on the recipient. View tags reduce the work per announcement, but announcements need not correspond to real payments and cost only ordinary transaction gas, so a spammer can inflate the log that every recipient must parse. Outsourcing the scanning hands the viewing key, and with it the full payment list, to the scanning service; oblivious message retrieval (see the [pir](pir.md) card) is the research path to delegating detection without that disclosure.
 - Only the recipient link is hidden. Sender address, amount, asset, and timing remain public.
 - Wallet-native support is minimal; the scheme runs today mostly in standalone applications, which limits the anonymity set.
-- Post-quantum exposure is high. Announcements permanently publish ephemeral public keys on chain, so a future CRQC recovers the shared secrets retroactively and deanonymizes every past stealth payment; since spending public keys are published too, it also recovers spending keys, exposing stealth funds to theft. Post-quantum stealth schemes are research-stage; funds and meta-addresses must migrate before a CRQC exists.
+- Post-quantum exposure is high. Announcements permanently publish ephemeral public keys on chain, so a future CRQC recovers the shared secrets retroactively and deanonymizes every past stealth payment; since spending public keys are published too, it also recovers spending keys, exposing stealth funds to theft. A [hybrid approach](https://ethresear.ch/t/pq-anonymity-for-stealth-address-protocol/26094) for the announcement side is documented, neither audited nor in production: an ML-KEM-768 encapsulation is combined with the ECDH secret, so the recipient link holds while either assumption holds. Costs: the meta-address grows from 66 to 1,250 bytes, the announcement from 34 to 1,122 bytes (69,300 gas measured against 28,313 classical), and scanning runs one ML-KEM decapsulation per announcement. Spending stays ECDSA; [post-quantum spending](https://ethresear.ch/t/pq-spending-for-stealth-address-protocol/26095) is research-stage.
 
 ## Implementations
 
-[Umbra](https://github.com/ScopeLift/umbra-protocol) (its own pre-ERC contracts since 2021; an ERC-5564 version is pending) and [Fluidkey](https://github.com/fluidkey/fluidkey-stealth-account-kit) (ERC-5564) run stealth payments in production on mainnet and several L2s. Umbra's hosted frontend has been in maintenance mode since April 2026. Tooling cards pending.
+[Umbra](https://github.com/ScopeLift/umbra-protocol) (its own pre-ERC contracts since 2021; an ERC-5564 version is pending) and [Fluidkey](https://github.com/fluidkey/fluidkey-stealth-account-kit) (ERC-5564) run stealth payments in production on mainnet and several L2s. Umbra's hosted frontend has been in maintenance mode since April 2026. Tooling card: [fluidkey-stealth-account-kit](../tooling/fluidkey-stealth-account-kit.md).
 
 ## Further reading
 
 - [ERC-5564: Stealth Addresses](https://eips.ethereum.org/EIPS/eip-5564) (Final)
 - [ERC-6538: Stealth Meta-Address Registry](https://eips.ethereum.org/EIPS/eip-6538) (Final)
 - [An incomplete guide to stealth addresses](https://vitalik.eth.limo/general/2023/01/20/stealth.html), Vitalik Buterin, 2023
+- [PQ anonymity for stealth address protocol](https://ethresear.ch/t/pq-anonymity-for-stealth-address-protocol/26094), namnc, 2026
+- [PQ spending for stealth address protocol](https://ethresear.ch/t/pq-spending-for-stealth-address-protocol/26095), namnc, 2026
+- Hybrid announcements: [reference implementation](https://github.com/namnc/pq-stealth-scheme3-public/tree/a08d5505b4545bbd61adf7aafc800032922380dc) (Rust, Apache-2.0), [browser demo](https://github.com/0xakk0r0kamui/pq-stealth-scheme3-demo/tree/aa0e3aaf62ba69c00d2404060347f3ebb5e835eb) (MIT), [Kohaku integration](https://github.com/ethereum/kohaku-rs/pull/29) (PR, under review)
