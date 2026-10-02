@@ -1,6 +1,6 @@
 ---
 name: native-account-abstraction
-last_reviewed: 2026-08-19
+last_reviewed: 2026-10-02
 maturity: concept
 guarantees: [W-4, P-3]
 
@@ -35,17 +35,20 @@ Consensus itself; nothing else is introduced. The engineering surface, and the r
 
 ## Known limits
 
-- Draft stage: a Hegotá candidate (2027) among many, nothing scheduled; the prior proposals went unscheduled too.
+- EIP-8141, the EIP bringing native account abstraction, is a Hegotá headliner per [EIP-8081](https://eips.ethereum.org/EIPS/eip-8081); keyed nonces ([EIP-8250](https://eips.ethereum.org/EIPS/eip-8250)) and recent roots ([EIP-8272](https://eips.ethereum.org/EIPS/eip-8272)) are considered for inclusion. No activation date is set.
 - Until then, account abstraction runs extra-protocol through bundler markets, an intermediated present; EIP-7702 gives EOAs account code today without removing the relay dependence of sponsored flows.
-- Post-quantum, the quiet benefit: frames are a native off-ramp from ECDSA, so accounts adopt post-quantum signatures by their own choice, without protocol surgery.
+- Post-quantum: frames are the modular piece added to accounts, so post-quantum validation can be adopted later per account, without a protocol fork.
 
 ## Implementations
 
-None native. The extra-protocol present is the [ERC-4337 stack](https://github.com/eth-infinitism/account-abstraction); the native designs live in the EIP process. Tooling cards pending.
+EIP-8141 together with EIP-8250, EIP-8272 and FOCIL (EIP-7805) runs on the [ethrex Hegotá devnet](https://github.com/lambdaclass/ethrex/tree/6f9f055a41883c4d996ff17b8a37174ff7524527).
 
 ## Further reading
 
 - [EIP-8141: frame transaction](https://eips.ethereum.org/EIPS/eip-8141), the current direction
+- [EIP-8081: Hegotá network upgrade meta](https://eips.ethereum.org/EIPS/eip-8081)
+- [EIP-8250: keyed nonces for frame transactions](https://eips.ethereum.org/EIPS/eip-8250)
+- [EIP-8272: recent roots for frame transactions](https://eips.ethereum.org/EIPS/eip-8272)
 - [EIP-7701: native account abstraction](https://eips.ethereum.org/EIPS/eip-7701) (withdrawn, superseded by 8141)
 - [RIP-7560: native account abstraction for rollups](https://docs.erc4337.io/core-standards/rip-7560.html)
 - [ERC-4337: account abstraction using alt mempool](https://eips.ethereum.org/EIPS/eip-4337)

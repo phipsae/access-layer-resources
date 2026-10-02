@@ -1,6 +1,6 @@
 ---
 name: shielded-pools
-last_reviewed: 2026-08-26
+last_reviewed: 2026-10-02
 maturity: production
 guarantees: [D-2, P-1]
 
@@ -31,7 +31,7 @@ D-2: positions, balances, and history leave the public ledger while funds stay i
 
 ## Trust model
 
-The core needs no operator: circuit soundness is the cryptographic base, and the systems deployed today all run Groth16 with circuit-specific ceremonies, so a live trusted setup is part of it. Relayers that pay withdrawal gas see timing and destinations, and can refuse service; the draft frame-transaction EIPs (recent-root validation, keyed nonces) would let spends enter the public mempool without them. Association-set designs add a screening party that gates inflows; its exclusions are a policy decision, and a lawful user it excludes bears the cost.
+The core needs no operator: circuit soundness is the cryptographic base, and the systems deployed today all run Groth16 with circuit-specific ceremonies, so a live trusted setup is part of it. Relayers that pay withdrawal gas see timing and destinations, and can refuse service; recent roots ([EIP-8272](https://eips.ethereum.org/EIPS/eip-8272)) and keyed nonces ([EIP-8250](https://eips.ethereum.org/EIPS/eip-8250)) for frame transactions, both considered for inclusion in Hegotá, will let spends enter the public mempool without relayers.
 
 ## Known limits
 
@@ -39,11 +39,11 @@ The core needs no operator: circuit soundness is the cryptographic base, and the
 - Timing and amount correlation shrink the effective set further; the funding-link problem applies at entry and exit.
 - Regulatory history shapes integration: the earliest pool was sanctioned in 2022 and delisted in 2025, and screening designs exist to keep that from recurring.
 - Scaling costs grow with use: nullifier sets and commitment trees only ever grow, and wallets must scan published notes to find their own, a client-side cost that rises with pool activity.
-- Post-quantum exposure is a soundness problem before a privacy problem: a CRQC forges the pairing-based proofs, enabling undetectable minting inside the pool. Past unlinkability itself survives, since the deployed commitments are preimage-resistant hashes of high-entropy secrets and hash security stands up to quantum attack, except where note ciphertexts published on chain use classical key agreement and remain harvestable.
+- Post-quantum exposure: a CRQC forges today's pairing-based proofs, enabling undetectable minting inside the pool; post-quantum proof systems with in-mempool aggregation ([EIP-8288](https://eips.ethereum.org/EIPS/eip-8288), Draft) are the route to replacing them. Commitments and nullifiers are hashes and survive. Pools whose in-pool transactions publish note ciphertexts under classical key agreement expose them to harvest-now-decrypt-later attacks.
 
 ## Implementations
 
-[Railgun](https://github.com/Railgun-Privacy/contract) (shielded UTXO, mainnet since 2021, deposit screening via Private Proofs of Innocence) and [Privacy Pools](https://github.com/0xbow-io/privacy-pools-core) (association sets, mainnet since 2025). Railgun has a working Kohaku wallet plugin; a Privacy Pools plugin is in development. Tooling cards pending.
+[Railgun](https://github.com/Railgun-Privacy/contract) (shielded UTXO, mainnet since 2021, deposit screening via Private Proofs of Innocence) and [Privacy Pools](https://github.com/0xbow-io/privacy-pools-core) (association sets, mainnet since 2025). Both are exposed as Kohaku wallet plugins. Tooling card: [kohaku](../tooling/kohaku.md).
 
 ## Further reading
 
@@ -52,3 +52,5 @@ The core needs no operator: circuit soundness is the cryptographic base, and the
 - [Railgun documentation](https://docs.railgun.org/)
 - [Private Proofs of Innocence](https://docs.railgun.org/wiki/assurance/private-proofs-of-innocence), Railgun wiki
 - [Privacy Pools](https://privacypools.com/), 0xbow
+- [EIP-8288: in-mempool signature and proof aggregation](https://eips.ethereum.org/EIPS/eip-8288) (Draft)
+- [Towards native post-quantum private ETH](https://ethresear.ch/t/towards-native-post-quantum-private-eth/25291), Pierre, 2026
