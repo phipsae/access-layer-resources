@@ -1,6 +1,6 @@
 ---
 name: pir
-last_reviewed: 2026-08-26
+last_reviewed: 2026-10-02
 maturity: usable
 guarantees: [W-1, W-3]
 
@@ -52,6 +52,7 @@ Open source libraries: [FrodoPIR](https://github.com/brave-experiments/frodo-pir
 ## Further reading
 
 - [EF Private Reads roadmap](https://reads.ethereum.foundation/roadmap/)
-- [Sharded PIR design for the Ethereum state](https://notes.ethereum.org/U9xM4VOPR9isPK7lOZJUQg) (draft)
-- [Ethereum privacy: private information retrieval](https://hackmd.io/@brech1/ethereum-privacy-pir)
+- [Sharded PIR design for the Ethereum state](https://ethresear.ch/t/sharded-pir-design-for-the-ethereum-state/24552), aliatiia, 2026
+- [Ethereum privacy: private information retrieval](https://pse.dev/blog/ethereum-privacy-pir), PSE
+- [InsPIRe: communication-efficient PIR with server-side preprocessing](https://eprint.iacr.org/2025/1352), Akhavan Mahdavi, Patel, Seo, Yeo, 2025
 - [Oblivious message retrieval](https://eprint.iacr.org/2021/1256), Liu and Tromer, 2021
