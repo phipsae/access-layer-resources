@@ -3,6 +3,7 @@ name: anonymous-credentials
 last_reviewed: 2026-08-19
 maturity: usable
 guarantees: [I-1, I-3, I-5]
+specs: [https://github.com/ethereum/access-layer-specs/blob/59c6310660edcadf172158bc8a1955be1dfad8ab/specs/2-anon-aadhaar-v2/README.md, https://github.com/ethereum/access-layer-specs/blob/59c6310660edcadf172158bc8a1955be1dfad8ab/specs/5-zk-proof-of-personhood/README.md]
 
 related:
   requires: []
@@ -43,7 +44,7 @@ The issuer vouches for claim truth and nothing else: a lying issuer produces val
 
 ## Implementations
 
-[ZKPassport](https://github.com/zkpassport/circuits) (passport and eID predicates, live apps and SDK) and [zkEmail](https://github.com/zkemail) (email predicates, circuits and SDKs). Tooling cards pending.
+[ZKPassport](https://github.com/zkpassport/circuits) (passport and eID predicates, live apps and SDK) and [zkEmail](https://github.com/zkemail) (email predicates, circuits and SDKs); tooling cards for both pending. Tooling card: [zkid](../tooling/zkid.md), proof of personhood from X.509 certificates.
 
 ## Further reading
 

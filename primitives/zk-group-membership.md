@@ -3,6 +3,7 @@ name: zk-group-membership
 last_reviewed: 2026-08-19
 maturity: production
 guarantees: [I-4, I-5]
+specs: [https://github.com/ethereum/access-layer-specs/blob/59c6310660edcadf172158bc8a1955be1dfad8ab/specs/3-semaphore-v4/README.md]
 
 related:
   requires: []
@@ -43,7 +44,7 @@ Circuit soundness plus the proof system's ceremony carry the cryptography. The r
 
 ## Implementations
 
-[Semaphore](https://github.com/semaphore-protocol/semaphore) (PSE; v4 audited, trusted-setup ceremony completed 2024) with sustained use across [Zupass](https://github.com/proofcarryingdata/zupass) and others; a modified fork underlies a major proof-of-personhood system. Tooling cards pending.
+[Semaphore](https://github.com/semaphore-protocol/semaphore) (PSE; v4 audited, trusted-setup ceremony completed 2024) with sustained use across [Zupass](https://github.com/proofcarryingdata/zupass) and others; a modified fork underlies a major proof-of-personhood system. Tooling card: [semaphore](../tooling/semaphore.md).
 
 ## Further reading
 
