@@ -3,7 +3,7 @@ name: zk-group-membership
 last_reviewed: 2026-08-19
 maturity: production
 guarantees: [I-4, I-5]
-specs: [https://github.com/ethereum/access-layer-specs/blob/59c6310660edcadf172158bc8a1955be1dfad8ab/specs/3-semaphore-v4/README.md]
+specs: [https://github.com/ethereum/access-layer-specs/blob/main/specs/3-semaphore-v4/README.md]
 
 related:
   requires: []

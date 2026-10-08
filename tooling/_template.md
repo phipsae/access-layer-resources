@@ -9,9 +9,9 @@ maturity: research | concept | usable | production
 # primitives/<slug>.md and must resolve. Omit when no card applies.
 implements: [<primitive-slug>]
 
-# Optional: permalinks, pinned to a commit, to the specs in
+# Optional: links on the main branch to the specs in
 # ethereum/access-layer-specs this tool implements. Omit when there are none.
-conforms_to: [<permalink>]
+conforms_to: [<link>]
 
 # Guarantee IDs this tool satisfies when integrated as documented.
 guarantees: [W-1, W-3]

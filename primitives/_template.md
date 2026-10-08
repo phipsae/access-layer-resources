@@ -12,10 +12,10 @@ maturity: research | concept | usable | production
 # Guarantee IDs this primitive can satisfy, defined in domains/.
 guarantees: [W-1]
 
-# Optional: permalinks, pinned to a commit, to specs in
+# Optional: links on the main branch to specs in
 # ethereum/access-layer-specs that specify a protocol for this primitive.
 # Delete when there are none.
-specs: [<permalink>]
+specs: [<link>]
 
 # Typed cross-references to other primitives. Slugs match
 # primitives/<slug>.md and must resolve to an existing file.

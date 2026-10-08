@@ -3,7 +3,7 @@ name: zk-proof-of-personhood
 last_reviewed: 2026-10-06
 maturity: usable
 implements: [anonymous-credentials]
-conforms_to: [https://github.com/ethereum/access-layer-specs/blob/59c6310660edcadf172158bc8a1955be1dfad8ab/specs/5-zk-proof-of-personhood/README.md]
+conforms_to: [https://github.com/ethereum/access-layer-specs/blob/main/specs/5-zk-proof-of-personhood/README.md]
 guarantees: [I-1, I-3]
 ---
 
@@ -21,7 +21,7 @@ Prerequisite: users holding Taiwan MOICA citizen certificates (MOICA-G2 or G3), 
 2. [user] Generates the two linked proofs (certificate chain and device signature) on mobile or in the browser.
 3. [app] Verifies the proofs, checks revocation, and records the nullifier.
 
-Its entry in access-layer-specs is [5/ZK-PROOF-OF-PERSONHOOD](https://github.com/ethereum/access-layer-specs/blob/59c6310660edcadf172158bc8a1955be1dfad8ab/specs/5-zk-proof-of-personhood/README.md), which points to the text in [ethereum/zkID](https://github.com/ethereum/zkID).
+Its entry in access-layer-specs is [5/ZK-PROOF-OF-PERSONHOOD](https://github.com/ethereum/access-layer-specs/blob/main/specs/5-zk-proof-of-personhood/README.md), which points to the text in [ethereum/zkID](https://github.com/ethereum/zkID).
 
 ## Audit and maturity status
 

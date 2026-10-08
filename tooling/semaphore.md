@@ -21,7 +21,7 @@ Prerequisite: a JavaScript app and a group admission rule.
 3. [user] Proves membership and signals client-side, with the scope chosen per context.
 4. [contract] Verifies and records the nullifier once per scope.
 
-The [documentation](https://docs.semaphore.pse.dev/) is the guide. The protocol is specified in [3/SEMAPHORE-V4](https://github.com/ethereum/access-layer-specs/blob/59c6310660edcadf172158bc8a1955be1dfad8ab/specs/3-semaphore-v4/README.md).
+The [documentation](https://docs.semaphore.pse.dev/) is the guide. The protocol is specified in [3/SEMAPHORE-V4](https://github.com/ethereum/access-layer-specs/blob/main/specs/3-semaphore-v4/README.md).
 
 ## Audit and maturity status
 
