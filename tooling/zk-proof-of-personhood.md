@@ -1,5 +1,5 @@
 ---
-name: zkid
+name: zk-proof-of-personhood
 last_reviewed: 2026-10-06
 maturity: usable
 implements: [anonymous-credentials]
